@@ -1,10 +1,10 @@
 import edu.princeton.cs.algs4.*;
 
+// By convention, the row and column indices are integers between 1 and n
 public class Percolation {
-    //warning: the input row and col is in the range of [1,n]
     private boolean[][] graph;
-    private int[][] connectTo;
     private final int size;
+    private int openSites;
     WeightedQuickUnionUF uf;
 
 
@@ -12,16 +12,9 @@ public class Percolation {
     public Percolation(int n) throws IllegalArgumentException{
         if (n<=0) throw new IllegalArgumentException();
 
-        this.graph=new boolean[n][n];
-        this.connectTo=new int[n][n];
-        for (int i=0;i<n;i++){
-            for (int j=0;j<n;j++){
-                connectTo[i][j]=i*n+j;
-//                System.out.println("connectTo(i,j)= "+connectTo[i][j]);
-//                System.out.println("graph(i,j)= "+graph[i][j]);
-            }
-        }
-        this.size=n;
+        graph=new boolean[n][n];
+        openSites=0;
+        size=n;
         uf=new WeightedQuickUnionUF(n*n);
     }
 
@@ -30,17 +23,29 @@ public class Percolation {
     //1<=row,col<=n
     public void open(int row, int col) throws IllegalArgumentException{
         if (row<1||col<1||row>size||col>size) throw new IllegalArgumentException();
+
         graph[row-1][col-1]=true;
+        openSites++;
 
-        //self:row-1,col-1
-        //up: row-2,col-1
-        //bottom:row,col-1
-        //left: row-1,col-2
-        //right:row-1,col
+        //if up is open, union up and self
+        if (isOpen(row-1,col)){
+            uf.union((row-2)*size+(col-1),(row-1)*size+(col-1));
+        }
 
-        //if up, union up and self
+        //if left is open, union left and self
+        if (isOpen(row,col-1)){
+            uf.union((row-1)*size+(col-2),(row-1)*size+(col-1));
+        }
 
+        //if right is open, union right and self
+        if(isOpen(row,col+1)){
+            uf.union((row-1)*size+col,(row-1)*size+(col-1));
+        }
 
+        //if bottom is open, union bottom and self
+        if (isOpen(row+1,col)){
+            uf.union(row*size+(col-1),(row-1)*size+(col-1));
+        }
     }
 
 
@@ -55,35 +60,21 @@ public class Percolation {
         // full: A full site is an open site that
         // can be connected to an open site in the top row
         // via a chain of neighboring (left, right, up, down) open sites.
-        int i=row-1,j=col-1;
-        while(connectTo[i][j]!=i*size+j){
-            i=connectTo[i][j]/size;
-            j=connectTo[i][j]%size;
-        }
-        if (i==0)
+        if (uf.find((row-1)*size+(col-1))<size){
             return true;
+        }
         return false;
     }
 
     // returns the number of open sites
     public int numberOfOpenSites(){
-        //input? get from graph?
-        int count=0;
-        for (int i=0;i<size;i++){
-            for (int j=0;j<size;j++){
-                if (isOpen(i,j)){
-                    //warning: should i+1, j+1?
-                    count++;
-                }
-            }
-        }
-        return count;
+        return openSites;
     }
 
     // does the system percolate?
     public boolean percolates(){
         for (int i=0;i<size;i++){
-            if (findRoot(size-1,i)<size) return true;
+            if (uf.find((size-1)*size+i)<size) return true;
         }
         return false;
     }
