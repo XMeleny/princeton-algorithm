@@ -15,7 +15,11 @@ public class Percolation {
         graph=new boolean[n][n];
         openSites=0;
         size=n;
-        uf=new WeightedQuickUnionUF(n*n);
+        uf=new WeightedQuickUnionUF(n*n+2);//add virtual node: n*n is for first row, n*n+1 is for last row
+    }
+
+    private int mapToArray(int tRow,int tCol){
+        return tRow*size+tCol;
     }
 
 
@@ -25,41 +29,39 @@ public class Percolation {
         if (row<1||col<1||row>size||col>size) throw new IllegalArgumentException();
 
         if(!isOpen(row,col)){
+
             graph[row-1][col-1]=true;
             openSites++;
 
+            int tRow=row-1;
+            int tCol=col-1;
+            int self=mapToArray(tRow,tCol);
+
+            if (row==1)
+                uf.union(self,size*size);
+            if (row==size)
+                uf.union(self,size*size+1);
+
             //if up is open, union up and self
-            if (row!=1&&isOpen(row-1,col)){
-                uf.union((row-2)*size+(col-1),(row-1)*size+(col-1));
+            if (row>1&&isOpen(row-1,col)){
+                uf.union((tRow-1)*size+tCol,self);
             }
 
             //if left is open, union left and self
-            if (col!=1&&isOpen(row,col-1)){
-                uf.union((row-1)*size+(col-2),(row-1)*size+(col-1));
+            if (col>1&&isOpen(row,col-1)){
+                uf.union(tRow*size+tCol-1,self);
             }
 
             //if right is open, union right and self
             if(col!=size&&isOpen(row,col+1)){
-                uf.union((row-1)*size+col,(row-1)*size+(col-1));
+                uf.union(tRow*size+tCol+1,self);
             }
 
             //if bottom is open, union bottom and self
             if (row!=size&&isOpen(row+1,col)){
-                uf.union(row*size+(col-1),(row-1)*size+(col-1));
+                uf.union((tRow+1)*size+tCol,self);
             }
-
-            for (int i=0;i<size;i++){
-                for (int j=0;j<size;j++) {
-                    if (graph[i][j])
-                        System.out.print("O");
-                    else
-                        System.out.print("X");
-                }
-                System.out.println();
-            }
-            System.out.println();
         }
-
     }
 
 
@@ -74,7 +76,8 @@ public class Percolation {
         // full: A full site is an open site that
         // can be connected to an open site in the top row
         // via a chain of neighboring (left, right, up, down) open sites.
-        if (isOpen(row,col)&&uf.find((row-1)*size+(col-1))<size){
+        int self=mapToArray(row-1,col-1);
+        if (isOpen(row,col)&&uf.find(self)==uf.find(size*size)){
             return true;
         }
         return false;
@@ -87,9 +90,8 @@ public class Percolation {
 
     // does the system percolate?
     public boolean percolates(){
-        for (int i=0;i<size;i++){
-            if (uf.find((size-1)*size+i)<size) return true;
-        }
+        if (uf.find(size*size)==uf.find(size*size+1))
+            return true;
         return false;
     }
 
@@ -104,12 +106,10 @@ public class Percolation {
         System.out.println(p.percolates());
         p.open(3,2);
         System.out.println(p.percolates());
-        System.out.println(p.isFull(3,2));
 
         p.open(3,3);
         System.out.println(p.percolates());
 
-        //todo: read input file and handle
 
     }
 }

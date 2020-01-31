@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f7a7e9d-821a-4678-8555-ad7271ad5fb3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/out/production/single/Percolation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/Percolation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/src/Percolation.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/src/Percolation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Percolation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Percolation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PercolationStats.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PercolationStats.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -110,7 +111,7 @@
       <workItem from="1580192568236" duration="4032000" />
       <workItem from="1580203382413" duration="2901000" />
       <workItem from="1580276643855" duration="1213000" />
-      <workItem from="1580359535866" duration="7762000" />
+      <workItem from="1580359535866" duration="12342000" />
     </task>
     <servers />
   </component>
