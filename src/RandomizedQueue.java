@@ -38,11 +38,9 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         for (int i=0;i<size-1;i++){
             temp=first+i;
             temp=mod(temp,capacity/2);
-//            System.out.println("i is: "+i+", temp is: "+temp);
             result[i]=array[temp];
         }
         array=result;
-//        System.out.println("after enlarging array, the capacity is: "+capacity+", the size is: "+size);
     }
     private void shrinkArray(){
         capacity=capacity/2;
@@ -54,7 +52,6 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
             result[i]=array[temp];
         }
         array=result;
-//        System.out.println("after shrinking array, the capacity is: "+capacity+", the size is: "+size);
     }
 
     // is the randomized queue empty?
@@ -130,42 +127,42 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         return array[getRandom(first,last)];
     }
 
-    private void shuffle(){
-        for (int i=0;i<size;i++){
-            int target=mod(first+i,capacity);
-            int choose=getRandom(mod(first+i,capacity),last);
-//            System.out.println("the target is: "+target+", the choose is: "+choose);
-            Item temp=array[target];
-            array[target]=array[choose];
-            array[choose]=temp;
+
+    private class TheIterator implements Iterator<Item>{
+        private int current;
+        private Item[] result;
+        private TheIterator(){
+            current=0;
+
+            result= (Item[]) new Object[size];
+            for (int i=0;i<size;i++){
+                result[i]=array[mod(first+i,capacity)];
+            }
+            StdRandom.shuffle(result);
+        }
+        @Override
+        public boolean hasNext() {
+            if (current<size) return true;
+            return false;
+        }
+
+        @Override
+        public Item next() {
+            if(!hasNext()) throw new NoSuchElementException();
+            Item item=result[current];
+            current++;
+            return item;
+        }
+
+        @Override
+        public void remove() {
+            throw new UnsupportedOperationException();
         }
     }
 
     // return an independent iterator over items in random order
     public Iterator<Item> iterator(){
-        shuffle();
-        return new Iterator<Item>() {
-            int current=first;
-            @Override
-            public boolean hasNext() {
-                if (array[current]!=null) return true;
-                return false;
-            }
-
-            @Override
-            public Item next() {
-                if(!hasNext()) throw new NoSuchElementException();
-                Item result=array[current];
-                current++;
-                current=mod(current,capacity);
-                return result;
-            }
-
-            @Override
-            public void remove() {
-                throw new UnsupportedOperationException();
-            }
-        };
+        return new TheIterator();
     }
 
     // unit testing (required)
