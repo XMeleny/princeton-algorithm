@@ -73,7 +73,7 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         if(item==null) throw new IllegalArgumentException();
 
         size++;
-        if(size>=capacity) enlargeArray();
+        if(size>capacity) enlargeArray();
         if(size==1){
             array[last]=item;
         }
@@ -97,7 +97,7 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
             array[last]=null;
         }
         else {
-            int position=getRandom(first,last);
+            int position=getRandom();
             result=array[position];
             array[position]=array[last];
             array[last]=null;
@@ -105,16 +105,15 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
             last=mod(last,capacity);
         }
 
-        if(size<=capacity/4) shrinkArray();
+        if(size<capacity/4) shrinkArray();
 
         return result;
     }
 
-    private int getRandom(int first,int last){
-
+    private int getRandom(){
         if(first==last) return first;
         else if (first>last){
-            int result=StdRandom.uniform(first,last+capacity);
+            int result=StdRandom.uniform(first,last+capacity+1);//[a,b)
             return result%capacity;
         }
         else return StdRandom.uniform(first,last);
@@ -124,7 +123,7 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
     public Item sample(){
         if(size==0) throw new NoSuchElementException();
 
-        return array[getRandom(first,last)];
+        return array[getRandom()];
     }
 
 
