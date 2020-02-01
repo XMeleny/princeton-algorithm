@@ -5,7 +5,6 @@ import edu.princeton.cs.algs4.StdRandom;
 public class RandomizedQueue<Item> implements Iterable<Item> {
     private int size;
     private int capacity;
-    private int first;
     private int last;
 
     private Item[] array;
@@ -14,42 +13,23 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
     public RandomizedQueue(){
         size=0;
         capacity=1;
-        first=0;
         last=0;
         array=(Item[]) new Object[capacity];
     }
 
-    //return i%n
-    private int mod(int i,int n){
-        i=i%n;
-        if (i<0){
-            return n+i;
-        }
-        else{
-            return i;
-        }
-    }
     private void enlargeArray(){
         capacity=2*capacity;
-//        System.out.println("capacity: "+capacity);
-//        System.out.println("size:"+size);
         Item[] result=(Item[]) new Object[capacity];
-        int temp;
         for (int i=0;i<size-1;i++){
-            temp=first+i;
-            temp=mod(temp,capacity/2);
-            result[i]=array[temp];
+            result[i]=array[i];
         }
         array=result;
     }
     private void shrinkArray(){
         capacity=capacity/2;
         Item[] result=(Item[]) new Object[capacity];
-        int temp;
         for (int i=0;i<size;i++){
-            temp=first+i;
-            temp=mod(i,capacity*2);
-            result[i]=array[temp];
+            result[i]=array[i];
         }
         array=result;
     }
@@ -79,7 +59,6 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         }
         else{
             last++;
-            last=mod(last,capacity);
             array[last]=item;
         }
 
@@ -97,12 +76,11 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
             array[last]=null;
         }
         else {
-            int position=getRandom();
+            int position=StdRandom.uniform(size+1);
             result=array[position];
             array[position]=array[last];
             array[last]=null;
             last--;
-            last=mod(last,capacity);
         }
 
         if(size<capacity/4) shrinkArray();
@@ -110,20 +88,10 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         return result;
     }
 
-    private int getRandom(){
-        if(first==last) return first;
-        else if (first>last){
-            int result=StdRandom.uniform(first,last+capacity+1);//[a,b)
-            return result%capacity;
-        }
-        else return StdRandom.uniform(first,last);
-    }
-
     // return a random item (but do not remove it)
     public Item sample(){
         if(size==0) throw new NoSuchElementException();
-
-        return array[getRandom()];
+        return array[StdRandom.uniform(size)];
     }
 
 
@@ -135,7 +103,7 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 
             result= (Item[]) new Object[size];
             for (int i=0;i<size;i++){
-                result[i]=array[mod(first+i,capacity)];
+                result[i]=array[i];
             }
             StdRandom.shuffle(result);
         }

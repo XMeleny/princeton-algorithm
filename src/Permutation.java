@@ -3,28 +3,21 @@ import edu.princeton.cs.algs4.StdOut;
 
 public class Permutation {
     public static void main(String[] args){
-        int k= StdIn.readInt();
-        Deque<String> deque=new Deque<>();
-//        RandomizedQueue<String> randomizedQueue=new RandomizedQueue<>();
+        int k=Integer.parseInt(args[0]);
+        RandomizedQueue<String> randomizedQueue=new RandomizedQueue<>();
 
         while(!StdIn.isEmpty()){
             String item=StdIn.readString();
-            deque.addFirst(item);
-//            randomizedQueue.enqueue(item);
+            randomizedQueue.enqueue(item);
         }
 
         int count=0;
-        for (String s:deque){
-            StdOut.println(s);
+        for (String s:randomizedQueue){
             count++;
-            if(count>=k) break;
+            if(count>k) break;
+            StdOut.println(s);
+
         }
-//        count=0;
-//        for (String s:randomizedQueue){
-//            StdOut.println(s);
-//            count++;
-//            if(count>=k) break;
-//        }
     }
 
 }
