@@ -17,6 +17,40 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         tail=null;
     }
 
+    //return i%n
+    private int mod(int i,int n){
+        i=i%n;
+        if (i<=0){
+            return n+i;
+        }
+        else{
+            return i%n;
+        }
+    }
+//    private void enlargeArray(){
+//        capacity=2*capacity;
+//        Item[] result=(Item[]) new Object[capacity];
+//        int temp;
+//        for (int i=0;i<size;i++){
+//            temp=first+i;
+//            temp=mod(i,capacity);
+//            result[i]=array[temp];
+//        }
+//        array=result;
+//    }
+//    private void shrinkArray(){
+//        capacity=capacity/2;
+//        //todo: copy and paste
+//        Item[] result=(Item[]) new Object[capacity];
+//        int temp;
+//        for (int i=0;i<size;i++){
+//            temp=first+i;
+//            temp=mod(i,capacity);
+//            result[i]=array[temp];
+//        }
+//        array=result;
+//    }
+
     // is the randomized queue empty?
     public boolean isEmpty(){
         if(size==0){
