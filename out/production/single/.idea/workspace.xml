@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f7a7e9d-821a-4678-8555-ad7271ad5fb3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/out/production/single/Percolation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/Percolation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/src/Percolation.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/src/Percolation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Percolation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Percolation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Deque.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Deque.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,9 +63,16 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Percolation">
+  <component name="RunManager" selected="Application.Deque">
     <configuration name="CheckInit" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CheckInit" />
+      <module name="single" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Deque" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Deque" />
       <module name="single" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -89,6 +94,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Deque" />
         <item itemvalue="Application.Percolation" />
         <item itemvalue="Application.CheckInit" />
         <item itemvalue="Application.Start" />
@@ -112,6 +118,8 @@
       <workItem from="1580203382413" duration="2901000" />
       <workItem from="1580276643855" duration="1213000" />
       <workItem from="1580359535866" duration="12342000" />
+      <workItem from="1580449051316" duration="105000" />
+      <workItem from="1580457266163" duration="3533000" />
     </task>
     <servers />
   </component>
@@ -123,7 +131,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

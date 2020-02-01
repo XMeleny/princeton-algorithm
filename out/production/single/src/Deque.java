@@ -1,5 +1,3 @@
-import edu.princeton.cs.algs4.StdOut;
-
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
@@ -16,7 +14,6 @@ public class Deque<Item> implements Iterable<Item> {
     //return i%n
 
     private int mod(int i,int n){
-        i=i%n;
         if (i<=0){
             return n+i;
         }
@@ -47,26 +44,7 @@ public class Deque<Item> implements Iterable<Item> {
 
     private void enlargeArray(){
         capacity=2*capacity;
-        Item[] result=(Item[]) new Object[capacity];
-        int temp;
-        for (int i=0;i<size;i++){
-            temp=first+i;
-            temp=mod(i,capacity);
-            result[i]=array[temp];
-        }
-        array=result;
-    }
-    private void shrinkArray(){
-        capacity=capacity/2;
-        //todo: copy and paste
-        Item[] result=(Item[]) new Object[capacity];
-        int temp;
-        for (int i=0;i<size;i++){
-            temp=first+i;
-            temp=mod(i,capacity);
-            result[i]=array[temp];
-        }
-        array=result;
+
     }
 
     // add the item to the front
@@ -106,59 +84,38 @@ public class Deque<Item> implements Iterable<Item> {
     // remove and return the item from the front
     public Item removeFirst(){
         if(size==0) throw new NoSuchElementException();
-
-        size--;
-        if (size<capacity/4) shrinkArray();
-
-        Item result=array[first];
-        array[first]=null;//problem: would it affect result?
-        first++;
-        first=mod(first,capacity);
-        return result;
+        //todo
+        return null;
     }
 
     // remove and return the item from the back
     public Item removeLast(){
         if(size==0) throw new NoSuchElementException();
-
-        size--;
-        if (size<capacity/4) shrinkArray();
-
-        Item result=array[last];
-        array[last]=null;//problem: would it affect result?
-        last--;
-        last=mod(last,capacity);
-        return result;
+        //todo
+        return null;
     }
 
     // return an iterator over items in order from front to back
     public Iterator<Item> iterator(){
-        return new Iterator<Item>() {
-            private int current=first;
-            @Override
-            public boolean hasNext() {
-                return array[current] != null;
-            }
-
-            @Override
-            public Item next() {
-                Item result=array[current];
-                if (result==null) throw new NoSuchElementException();
-                current++;
-                current=mod(current,capacity);
-                return result;
-            }
-
-            @Override
-            public void remove() {
-                throw new UnsupportedOperationException();
-            }
-        };
+        //todo
+        return null;
+//        return new Iterator<Item>() {
+//            @Override
+//            public boolean hasNext() {
+//                return false;
+//            }
+//
+//            @Override
+//            public Item next() {
+//                return null;
+//            }
+//        };
     }
 
     // unit testing (required)
     public static void main(String[] args){
-
+        int i=-1%100;
+        System.out.println(i);
     }
 
 }
