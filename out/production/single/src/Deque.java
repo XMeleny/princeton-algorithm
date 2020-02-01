@@ -1,34 +1,27 @@
+import edu.princeton.cs.algs4.StdOut;
+
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 //deque: 双端队列
 public class Deque<Item> implements Iterable<Item> {
-
-    private int first;
-    private int last;
-    private int capacity;
-    private int size;
-    private Item[] array;
-
-
-    //return i%n
-
-    private int mod(int i,int n){
-        if (i<=0){
-            return n+i;
-        }
-        else{
-            return i%n;
-        }
+    private class Node{
+        private Item item;
+        private Node next;
+        private Node past;
     }
+
+    private Node first;
+    private Node last;
+
+    private int size;
+
 
     // construct an empty deque
     public Deque(){
-        first=0;
-        last =0;
+        first=null;
+        last=null;
         size=0;
-        capacity=1;
-        array=(Item[])new Object[capacity];
     }
 
     // is the deque empty?
@@ -42,80 +35,112 @@ public class Deque<Item> implements Iterable<Item> {
         return size;
     }
 
-    private void enlargeArray(){
-        capacity=2*capacity;
-
-    }
-
     // add the item to the front
     public void addFirst(Item item){
         if (item==null) throw new IllegalArgumentException();
 
+        Node n=new Node();
+        n.item=item;
+        n.next=null;
+        n.past=null;
+
         if(size==0){
-            size++;
-            array[first]=item;
+            first=last=n;
         }
-        else {
-            size++;
-            if (size>capacity) enlargeArray();
-            first--;
-            first=mod(first,capacity);
-            array[first]=item;
+        else{
+            n.next=first;
+            first.past=n;
+            first=n;
         }
+        size++;
     }
 
     // add the item to the back
     public void addLast(Item item){
         if (item==null) throw new IllegalArgumentException();
-        //todo
-        if(size==0){
-            size++;
-            array[last]=item;
+
+        Node n=new Node();
+        n.item=item;
+        n.next=null;
+        n.past=null;
+
+        if (size==0){
+            first=last=n;
         }
         else{
-            size++;
-            if (size>capacity) enlargeArray();
-            last++;
-            last=mod(last,capacity);
-            array[last]=item;
+            last.next=n;
+            n.past=last;
+            last=n;
         }
+        size++;
     }
 
     // remove and return the item from the front
     public Item removeFirst(){
         if(size==0) throw new NoSuchElementException();
-        //todo
-        return null;
+
+        Item result=first.item;
+
+        if (size==1){
+            first=last=null;
+        }
+        else{
+            Node temp=first;
+            first=first.next;
+            first.past=null;
+            temp.next=null;
+        }
+        size--;
+
+        return result;
     }
 
     // remove and return the item from the back
     public Item removeLast(){
         if(size==0) throw new NoSuchElementException();
-        //todo
-        return null;
+
+        Item result=last.item;
+        if (size==1){
+            first=last=null;
+        }
+        else {
+            Node temp=last;
+            last=last.past;
+            last.next=null;
+            temp.past=null;
+        }
+        size--;
+
+        return result;
     }
 
     // return an iterator over items in order from front to back
     public Iterator<Item> iterator(){
-        //todo
-        return null;
-//        return new Iterator<Item>() {
-//            @Override
-//            public boolean hasNext() {
-//                return false;
-//            }
-//
-//            @Override
-//            public Item next() {
-//                return null;
-//            }
-//        };
+        return new Iterator<Item>() {
+            private Node current=first;
+            @Override
+            public boolean hasNext() {
+                return current != null;
+            }
+
+            @Override
+            public Item next() {
+                if(current==null) throw new NoSuchElementException();
+                Item result=current.item;
+                current=current.next;
+                return result;
+            }
+
+            @Override
+            public void remove() {
+                throw new UnsupportedOperationException();
+            }
+        };
     }
 
     // unit testing (required)
     public static void main(String[] args){
-        int i=-1%100;
-        System.out.println(i);
+
     }
 
 }
