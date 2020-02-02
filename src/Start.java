@@ -15,8 +15,7 @@ public class Start {
      */
     public static void main(String[] args) {
 
-        int i;
-        i=mod(4,4);
-        System.out.println(i);
+        int[] a=new int[5];
+        System.out.println(a.length);
     }
 }

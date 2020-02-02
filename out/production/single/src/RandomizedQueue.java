@@ -76,7 +76,7 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
             array[last]=null;
         }
         else {
-            int position=StdRandom.uniform(size);
+            int position=StdRandom.uniform(size+1);
             result=array[position];
             array[position]=array[last];
             array[last]=null;
@@ -134,17 +134,17 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 
     // unit testing (required)
     public static void main(String[] args){
-        RandomizedQueue<Integer> randomizedQueue=new RandomizedQueue<>();
-        randomizedQueue.enqueue(1);
-        randomizedQueue.enqueue(2);
-        randomizedQueue.enqueue(3);
-        randomizedQueue.enqueue(4);
-        randomizedQueue.enqueue(5);
-        randomizedQueue.enqueue(6);
-
-        for (Integer integer:randomizedQueue){
-            System.out.println(integer);
-        }
+//        RandomizedQueue<Integer> randomizedQueue=new RandomizedQueue<>();
+//        randomizedQueue.enqueue(1);
+//        randomizedQueue.enqueue(2);
+//        randomizedQueue.enqueue(3);
+//        randomizedQueue.enqueue(4);
+//        randomizedQueue.enqueue(5);
+//        randomizedQueue.enqueue(6);
+//
+//        for (Integer integer:randomizedQueue){
+//            System.out.println(integer);
+//        }
 //
 //        System.out.println();
 //        for (Integer integer:randomizedQueue){
