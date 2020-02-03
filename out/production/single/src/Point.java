@@ -112,15 +112,6 @@ public class Point implements Comparable<Point> {
                 if (slope1<slope2) return -1;
                 if (slope1==slope2) return 0;
                 return 1;
-
-//                int x0=o1.x;
-//                int y0=o1.y;
-//                int x1=o2.x;
-//                int y1=o2.y;
-//
-//                if (x0==x1&&y0==y1)return 0;
-//                if ((y0<y1)||(y0==y1&&x0<x1)) return -1;
-//                return 1;
             }
         };
 
