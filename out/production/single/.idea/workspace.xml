@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f7a7e9d-821a-4678-8555-ad7271ad5fb3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/out/production/single/BruteCollinearPoints.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/BruteCollinearPoints.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/Point.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/Point.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/Start.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/Start.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/src/BruteCollinearPoints.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/src/BruteCollinearPoints.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/src/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/src/Point.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/src/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/src/Start.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BruteCollinearPoints.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BruteCollinearPoints.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FastCollinearPoints.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FastCollinearPoints.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Point.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +66,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.BruteCollinearPoints">
+  <component name="RunManager" selected="Application.FastCollinearPoints">
     <configuration name="BruteCollinearPoints" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BruteCollinearPoints" />
       <module name="single" />
@@ -85,8 +81,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Percolation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Percolation" />
+    <configuration name="FastCollinearPoints" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="FastCollinearPoints" />
       <module name="single" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -108,11 +104,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.FastCollinearPoints" />
         <item itemvalue="Application.BruteCollinearPoints" />
         <item itemvalue="Application.Start" />
         <item itemvalue="Application.RandomizedQueue" />
         <item itemvalue="Application.Deque" />
-        <item itemvalue="Application.Percolation" />
       </list>
     </recent_temporary>
   </component>
@@ -138,7 +134,7 @@
       <workItem from="1580537693242" duration="2665000" />
       <workItem from="1580548137853" duration="15081000" />
       <workItem from="1580636453463" duration="12127000" />
-      <workItem from="1580706390614" duration="1644000" />
+      <workItem from="1580706390614" duration="9848000" />
     </task>
     <servers />
   </component>

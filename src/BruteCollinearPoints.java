@@ -14,8 +14,9 @@ public class BruteCollinearPoints {
         }
 
         //check repeated points
+        //copy: the system will check if arg points are mutated.
+        //sort: makes comparing and making segment easier
         int size = points.length;
-
         Point[] tempPoints = new Point[size];
         for (int i = 0; i < size; i++) {
             tempPoints[i] = points[i];
@@ -46,8 +47,6 @@ public class BruteCollinearPoints {
                 }
             }
         }
-
-
     }
 
     // the number of line segments
