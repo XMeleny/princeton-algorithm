@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f7a7e9d-821a-4678-8555-ad7271ad5fb3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/BruteCollinearPoints.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BruteCollinearPoints.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FastCollinearPoints.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FastCollinearPoints.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Point.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Board.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Solver.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,16 +65,16 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.FastCollinearPoints">
-    <configuration name="BruteCollinearPoints" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="BruteCollinearPoints" />
+  <component name="RunManager" selected="Application.Board">
+    <configuration name="Board" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Board" />
       <module name="single" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Deque" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Deque" />
+    <configuration name="BruteCollinearPoints" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BruteCollinearPoints" />
       <module name="single" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -104,11 +103,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Board" />
         <item itemvalue="Application.FastCollinearPoints" />
         <item itemvalue="Application.BruteCollinearPoints" />
         <item itemvalue="Application.Start" />
         <item itemvalue="Application.RandomizedQueue" />
-        <item itemvalue="Application.Deque" />
       </list>
     </recent_temporary>
   </component>
@@ -134,7 +133,8 @@
       <workItem from="1580537693242" duration="2665000" />
       <workItem from="1580548137853" duration="15081000" />
       <workItem from="1580636453463" duration="12127000" />
-      <workItem from="1580706390614" duration="9848000" />
+      <workItem from="1580706390614" duration="24164000" />
+      <workItem from="1580995755633" duration="1133000" />
     </task>
     <servers />
   </component>
