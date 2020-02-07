@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f7a7e9d-821a-4678-8555-ad7271ad5fb3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Board.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Solver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Board.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -134,7 +133,8 @@
       <workItem from="1580548137853" duration="15081000" />
       <workItem from="1580636453463" duration="12127000" />
       <workItem from="1580706390614" duration="24164000" />
-      <workItem from="1580995755633" duration="1133000" />
+      <workItem from="1580995755633" duration="7262000" />
+      <workItem from="1581047175520" duration="2155000" />
     </task>
     <servers />
   </component>
