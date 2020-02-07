@@ -1,20 +1,17 @@
-import edu.princeton.cs.algs4.StdRandom;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Board {
     private int[][] tiles;
-    private int dimension;
+    private final int dimension;
 
     // create a board from an n-by-n array of tiles,
     // where tiles[row][col] = tile at (row, col)
     public Board(int[][] tiles) {
         if (tiles == null) throw new IllegalArgumentException();
 
-        //dimension
-        dimension = tiles.length;
-        //tiles
+        dimension=tiles.length;
+
         this.tiles = new int[dimension][dimension];
         for (int i = 0; i < dimension; i++) {
             for (int j = 0; j < dimension; j++) {
@@ -70,7 +67,7 @@ public class Board {
         int count = 0;
         for (int i = 0; i < dimension; i++) {
             for (int j = 0; j < dimension; j++) {
-                if ((map2Dto1D(i, j) + 1) % 9 != tiles[i][j]) {
+                if (((map2Dto1D(i, j) + 1) % (dimension * dimension) != tiles[i][j]) && tiles[i][j] != 0) {
                     count++;
                 }
             }
@@ -87,11 +84,10 @@ public class Board {
         for (nowRow = 0; nowRow < dimension; nowRow++) {
             for (nowCol = 0; nowCol < dimension; nowCol++) {
                 if (tiles[nowRow][nowCol] == 0) continue;
-                rightRow = ((tiles[nowRow][nowCol] + 8) % 9) / dimension;
-                rightCol = ((tiles[nowRow][nowCol] + 8) % 9) % dimension;
+                rightRow = ((tiles[nowRow][nowCol] + dimension * dimension - 1) % (dimension * dimension)) / dimension;
+                rightCol = ((tiles[nowRow][nowCol] + dimension * dimension - 1) % (dimension * dimension)) % dimension;
                 dis = Math.abs(rightRow - nowRow) + Math.abs(rightCol - nowCol);
                 count += dis;
-//                System.out.println("" + now_row + " " + now_col + " " + right_row + " " + right_col+"  "+dis);
             }
         }
         return count;
@@ -149,25 +145,26 @@ public class Board {
 
     // a board that is obtained by exchanging any pair of tiles
     public Board twin() {
-        int row= StdRandom.uniform(dimension);
-        int col=StdRandom.uniform(dimension);
-        return new Board(swap(0,0,row,col));
+        int row1=0,col1=0,row2=1,col2=1;
+
+        if(tiles[row1][col1]==0){
+            row1=1;
+        }
+        else if(tiles[row2][col2]==0){
+            row2=0;
+        }
+
+        return new Board(swap(row1, col1, row2, col2));
     }
 
     // unit testing (not graded)
     public static void main(String[] args) {
-        Board b = new Board(new int[][]{{1, 2, 3}, {4, 5, 6}, {7, 8, 0}});
-        System.out.println(b.isGoal());
-////        Board c = new Board(new int[][]{{8, 1, 3}, {4, 0, 2}, {7, 6, 5}});
+//        Board b = new Board(new int[][]{{2, 15, 13, 3}, {4, 14, 1, 7}, {10, 9, 5, 11}, {8, 0, 12, 6}});
 //        System.out.println(b);
-////        System.out.println(b.equals(c));
-////        System.out.println("the hamming is " + b.hamming());
-////        System.out.println("the manhattan is " + b.manhattan());
 //
-//        for (Board board : b.neighbors()) {
-//            System.out.println(board);
-//        }
-
+//        System.out.println(b.twin());
+//        System.out.println(b.manhattan());
+//        System.out.println(b.isGoal());
     }
 
 }
