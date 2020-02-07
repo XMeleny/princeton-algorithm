@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Board {
-    private int[][] tiles;
+    private final int[][] tiles;
     private final int dimension;
 
     // create a board from an n-by-n array of tiles,
@@ -101,8 +101,14 @@ public class Board {
     // does this board equal y?
     public boolean equals(Object y) {
         if (this == y) return true;
+
+        if(y==null) return false;
+
+
         if (!(y instanceof Board)) return false;
         Board that = (Board) y;
+
+        if(that.dimension!=dimension) return false;
         return Arrays.deepEquals(this.tiles, that.tiles);
     }
 
