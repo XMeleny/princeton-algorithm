@@ -125,13 +125,13 @@ public class TweetCounts {
         return null;
     }
 
-    public static void main(String[] args) {
-        TweetCounts tweetCounts = new TweetCounts();
-        tweetCounts.recordTweet("tweet3", 0);
-        tweetCounts.recordTweet("tweet3", 60);
-        tweetCounts.recordTweet("tweet3", 10);
-        tweetCounts.recordTweet("tweet1", 10);
-
-        System.out.println(tweetCounts.getTweetCountsPerFrequency("minute", "tweet3", 0, 60));
-    }
+//    public static void main(String[] args) {
+//        TweetCounts tweetCounts = new TweetCounts();
+//        tweetCounts.recordTweet("tweet3", 0);
+//        tweetCounts.recordTweet("tweet3", 60);
+//        tweetCounts.recordTweet("tweet3", 10);
+//        tweetCounts.recordTweet("tweet1", 10);
+//
+//        System.out.println(tweetCounts.getTweetCountsPerFrequency("minute", "tweet3", 0, 60));
+//    }
 }

@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f7a7e9d-821a-4678-8555-ad7271ad5fb3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Solution.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/Board.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/Solver$Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/Solver$Node.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/Solver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/Solver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/src/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/src/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/src/Solver.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/src/Solver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/KdTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PointSET.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +79,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Solution">
+  <component name="RunManager" selected="Application.PointSET">
     <configuration name="Board" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Board" />
       <module name="single" />
@@ -92,15 +87,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BruteCollinearPoints" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="BruteCollinearPoints" />
-      <module name="single" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FastCollinearPoints" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="FastCollinearPoints" />
+    <configuration name="PointSET" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PointSET" />
       <module name="single" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -120,13 +108,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TweetCounts" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TweetCounts" />
+      <module name="single" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PointSET" />
+        <item itemvalue="Application.TweetCounts" />
         <item itemvalue="Application.Solution" />
         <item itemvalue="Application.Board" />
         <item itemvalue="Application.Solver" />
-        <item itemvalue="Application.FastCollinearPoints" />
-        <item itemvalue="Application.BruteCollinearPoints" />
       </list>
     </recent_temporary>
   </component>
@@ -156,7 +151,8 @@
       <workItem from="1580995755633" duration="7262000" />
       <workItem from="1581047175520" duration="19754000" />
       <workItem from="1581172358979" duration="6338000" />
-      <workItem from="1581214684579" duration="847000" />
+      <workItem from="1581214684579" duration="6900000" />
+      <workItem from="1581317842324" duration="1661000" />
     </task>
     <servers />
   </component>
