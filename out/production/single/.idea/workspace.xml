@@ -2,13 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f7a7e9d-821a-4678-8555-ad7271ad5fb3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Board.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Solution.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/Board.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/Solver$Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/Solver$Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/Solver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/Solver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/src/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/src/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/src/Solver.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/src/Solver.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -64,7 +84,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Board">
+  <component name="RunManager" selected="Application.Solution">
     <configuration name="Board" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Board" />
       <module name="single" />
@@ -86,15 +106,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RandomizedQueue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="RandomizedQueue" />
+    <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Solution" />
       <module name="single" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Start" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Start" />
+    <configuration name="Solver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Solver" />
       <module name="single" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -102,11 +122,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Solution" />
         <item itemvalue="Application.Board" />
+        <item itemvalue="Application.Solver" />
         <item itemvalue="Application.FastCollinearPoints" />
         <item itemvalue="Application.BruteCollinearPoints" />
-        <item itemvalue="Application.Start" />
-        <item itemvalue="Application.RandomizedQueue" />
       </list>
     </recent_temporary>
   </component>
@@ -134,7 +154,9 @@
       <workItem from="1580636453463" duration="12127000" />
       <workItem from="1580706390614" duration="24164000" />
       <workItem from="1580995755633" duration="7262000" />
-      <workItem from="1581047175520" duration="2155000" />
+      <workItem from="1581047175520" duration="19754000" />
+      <workItem from="1581172358979" duration="6338000" />
+      <workItem from="1581214684579" duration="847000" />
     </task>
     <servers />
   </component>

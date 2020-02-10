@@ -1,22 +1,20 @@
-import edu.princeton.cs.algs4.StdRandom;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Board {
-    private int[][] tiles;
-    private int dimension;
+    private final int[][] tiles;
+    private final int dimension;
 
     // create a board from an n-by-n array of tiles,
     // where tiles[row][col] = tile at (row, col)
     public Board(int[][] tiles) {
         if (tiles == null) throw new IllegalArgumentException();
 
-        //tiles
-//        this.dimension=tiles.length;
-        this.tiles = new int[tiles.length][tiles.length];
-        for (int i = 0; i < dimension(); i++) {
-            for (int j = 0; j < dimension(); j++) {
+        dimension=tiles.length;
+
+        this.tiles = new int[dimension][dimension];
+        for (int i = 0; i < dimension; i++) {
+            for (int j = 0; j < dimension; j++) {
                 this.tiles[i][j] = tiles[i][j];
             }
         }
@@ -24,9 +22,9 @@ public class Board {
 
     // string representation of this board
     public String toString() {
-        String result = "" + dimension() + "\n";
-        for (int i = 0; i < dimension(); i++) {
-            for (int j = 0; j < dimension(); j++) {
+        String result = "" + dimension + "\n";
+        for (int i = 0; i < dimension; i++) {
+            for (int j = 0; j < dimension; j++) {
                 result += " " + tiles[i][j];
             }
             result += "\n";
@@ -37,17 +35,17 @@ public class Board {
 
     // board dimension n
     public int dimension() {
-        return tiles.length;
+        return dimension;
     }
 
     private int map2Dto1D(int i, int j) {
-        return i * dimension() + j;
+        return i * dimension + j;
     }
 
     private int[][] copy() {
-        int[][] newTiles = new int[dimension()][dimension()];
-        for (int i = 0; i < dimension(); i++) {
-            for (int j = 0; j < dimension(); j++) {
+        int[][] newTiles = new int[dimension][dimension];
+        for (int i = 0; i < dimension; i++) {
+            for (int j = 0; j < dimension; j++) {
                 newTiles[i][j] = tiles[i][j];
             }
         }
@@ -67,9 +65,9 @@ public class Board {
     // number of tiles out of place
     public int hamming() {
         int count = 0;
-        for (int i = 0; i < dimension(); i++) {
-            for (int j = 0; j < dimension(); j++) {
-                if (((map2Dto1D(i, j) + 1) % (dimension() * dimension()) != tiles[i][j]) && tiles[i][j] != 0) {
+        for (int i = 0; i < dimension; i++) {
+            for (int j = 0; j < dimension; j++) {
+                if (((map2Dto1D(i, j) + 1) % (dimension * dimension) != tiles[i][j]) && tiles[i][j] != 0) {
                     count++;
                 }
             }
@@ -83,11 +81,11 @@ public class Board {
         int rightRow, rightCol;
         int nowRow, nowCol;
         int dis;
-        for (nowRow = 0; nowRow < dimension(); nowRow++) {
-            for (nowCol = 0; nowCol < dimension(); nowCol++) {
+        for (nowRow = 0; nowRow < dimension; nowRow++) {
+            for (nowCol = 0; nowCol < dimension; nowCol++) {
                 if (tiles[nowRow][nowCol] == 0) continue;
-                rightRow = ((tiles[nowRow][nowCol] + dimension() * dimension() - 1) % (dimension() * dimension())) / dimension();
-                rightCol = ((tiles[nowRow][nowCol] + dimension() * dimension() - 1) % (dimension() * dimension())) % dimension();
+                rightRow = ((tiles[nowRow][nowCol] + dimension * dimension - 1) % (dimension * dimension)) / dimension;
+                rightCol = ((tiles[nowRow][nowCol] + dimension * dimension - 1) % (dimension * dimension)) % dimension;
                 dis = Math.abs(rightRow - nowRow) + Math.abs(rightCol - nowCol);
                 count += dis;
             }
@@ -103,8 +101,14 @@ public class Board {
     // does this board equal y?
     public boolean equals(Object y) {
         if (this == y) return true;
+
+        if(y==null) return false;
+
+
         if (!(y instanceof Board)) return false;
         Board that = (Board) y;
+
+        if(that.dimension!=dimension) return false;
         return Arrays.deepEquals(this.tiles, that.tiles);
     }
 
@@ -115,8 +119,8 @@ public class Board {
 
         int row = 0, col = 0;
         //finding zero
-        for (int i = 0; i < dimension(); i++) {
-            for (int j = 0; j < dimension(); j++) {
+        for (int i = 0; i < dimension; i++) {
+            for (int j = 0; j < dimension; j++) {
                 if (tiles[i][j] == 0) {
                     row = i;
                     col = j;
@@ -134,11 +138,11 @@ public class Board {
             boards.add(new Board(swap(row, col, row, col - 1)));
         }
         //能向右移
-        if (col < dimension() - 1) {
+        if (col < dimension - 1) {
             boards.add(new Board(swap(row, col, row, col + 1)));
         }
         //能向下移
-        if (row < dimension() - 1) {
+        if (row < dimension - 1) {
             boards.add(new Board(swap(row, col, row + 1, col)));
         }
 
@@ -161,22 +165,12 @@ public class Board {
 
     // unit testing (not graded)
     public static void main(String[] args) {
-        Board b = new Board(new int[][]{{2,15,13,3}, {4,14,1,7}, {10,9,5,11}, {8,0,12,6}});
-//        Board b = new Board(new int[][]{{0, 1}, {2, 3}});
+//        Board b = new Board(new int[][]{{2, 15, 13, 3}, {4, 14, 1, 7}, {10, 9, 5, 11}, {8, 0, 12, 6}});
+//        System.out.println(b);
+//
 //        System.out.println(b.twin());
 //        System.out.println(b.manhattan());
 //        System.out.println(b.isGoal());
-//        Board c = new Board(new int[][]{{5, 0, 4}, {2, 3, 8}, {7, 1, 6}});
-//        System.out.println(c.twin());
-//        System.out.println(b);
-////        System.out.println(b.equals(c));
-////        System.out.println("the hamming is " + b.hamming());
-////        System.out.println("the manhattan is " + b.manhattan());
-//
-//        for (Board board : b.neighbors()) {
-//            System.out.println(board);
-//        }
-
     }
 
 }

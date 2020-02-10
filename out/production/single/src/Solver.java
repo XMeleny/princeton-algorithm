@@ -1,7 +1,5 @@
 import edu.princeton.cs.algs4.MinPQ;
-
 import java.util.ArrayList;
-import java.util.Comparator;
 
 public class Solver {
     private class Node implements Comparable<Node> {
@@ -9,6 +7,7 @@ public class Solver {
         int moves;
         int priority;
         Node previous;
+
 
         Node(Board board, int moves, Node previous) {
             this.board = board;
@@ -23,12 +22,10 @@ public class Solver {
             if(this.priority==that.priority) return 0;
             return 1;
         }
-
     }
 
     private boolean success;
     private Node solution;
-    private ArrayList<Board> closeList;
 
     // find a solution to the initial board (using the A* algorithm)
     public Solver(Board initial) {
@@ -36,7 +33,6 @@ public class Solver {
 
         success = false;
         solution = null;
-        closeList = new ArrayList<>();
 
         MinPQ<Node> openList = new MinPQ<>();
 
@@ -50,19 +46,24 @@ public class Solver {
                 solution = current;
                 break;
             }
-            for (Board board : current.board.neighbors()) {
-                if (!isInCloseList(board)) openList.insert(new Node(board, current.moves + 1, current));
+            if(current.board.twin().isGoal()){
+                break;
             }
-            closeList.add(current.board);
+            for (Board board : current.board.neighbors()) {
+                if (!isInCloseList(current,board)) openList.insert(new Node(board, current.moves + 1, current));
+            }
         }
     }
 
-    private boolean isInCloseList(Board b) {
-        for (Board board : closeList) {
-            if (b.equals(board)) return true;
+    private boolean isInCloseList(Node current,Board board){
+        Node node=current.previous;
+        while(node!=null){
+            if(board.equals(node.board)) return true;
+            node=node.previous;
         }
         return false;
     }
+
 
     // is the initial board solvable? (see below)
     public boolean isSolvable() {
@@ -74,7 +75,7 @@ public class Solver {
         if (success) {
             return solution.moves;
         }
-        return 0;
+        return -1;
     }
 
     // sequence of boards in a shortest solution
