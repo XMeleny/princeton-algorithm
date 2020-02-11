@@ -1,54 +1,68 @@
 import edu.princeton.cs.algs4.Point2D;
 import edu.princeton.cs.algs4.RectHV;
+import edu.princeton.cs.algs4.SET;
 
 public class KdTree {
 
     private class Node implements Comparable<Node> {
+        private static final int EVEN = 0;//vertical
+        private static final int ODD = 1;//horizontal
+
         Point2D point;
         int level;
 
-        Node parent;
+        public Node(Point2D point, int level) {
+            this.point = point;
+            this.level = level;
+        }
 
         @Override
         public int compareTo(Node that) {
-            return 0;
+            if (this.level == EVEN) {
+                return Double.compare(this.point.x(), that.point.x());
+            } else {
+                return Double.compare(this.point.y(), that.point.y());
+            }
         }
     }
 
-    private Node root;
-    private int size;
+    private SET<Node> set;
 
     // construct an empty set of points
     public KdTree() {
-        root = null;
-        size = 0;
+        set = new SET<>();
     }
 
     // is the set empty?
     public boolean isEmpty() {
-        return size == 0;
+        return set.isEmpty();
     }
 
     // number of points in the set
     public int size() {
-        return size;
+        return set.size();
     }
 
     // add the point to the set (if it is not already in the set)
     public void insert(Point2D p) {
         if (p == null) throw new IllegalArgumentException();
+        int level = size() % 2;
+
+        set.add(new Node(p,level));
     }
 
     // does the set contain point p?
     public boolean contains(Point2D p) {
         if (p == null) throw new IllegalArgumentException();
-
-        return false;
+        //fixme
+        return set.contains(new Node(p,0));
     }
 
     // draw all points to standard draw
     public void draw() {
-
+        for(Node node:set){
+            node.point.draw();
+        }
     }
 
     // all points that are inside the rectangle (or on the boundary)

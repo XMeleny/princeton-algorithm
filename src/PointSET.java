@@ -46,9 +46,11 @@ public class PointSET {
         if (rect == null) throw new IllegalArgumentException();
         ArrayList<Point2D> result = new ArrayList<>();
         for (Point2D p : pointSET) {
-            if (rect.xmin() <= p.x() && p.x() <= rect.xmax() && rect.ymin() <= p.y() && p.y() <= rect.ymax()) {
-                result.add(p);
-            }
+            if (rect.contains(p)) result.add(p);
+
+//            if (rect.xmin() <= p.x() && p.x() <= rect.xmax() && rect.ymin() <= p.y() && p.y() <= rect.ymax()) {
+//                result.add(p);
+//            }
         }
         return result;
 
@@ -78,6 +80,5 @@ public class PointSET {
 //        pointSET.insert(new Point2D(0.792202, 0.762825));
 //
 //        System.out.println(pointSET.nearest(new Point2D(0.158530, 0.486901)));
-
     }
 }
