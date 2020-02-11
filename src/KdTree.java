@@ -1,6 +1,5 @@
-import edu.princeton.cs.algs4.*;
-
-import javax.swing.*;
+import edu.princeton.cs.algs4.Point2D;
+import edu.princeton.cs.algs4.RectHV;
 
 public class KdTree {
 
@@ -62,10 +61,10 @@ public class KdTree {
 
 
         if ((node.isVertical == true && node.x < point.x()) || (node.isVertical == false && node.y < point.y()))
-            node = insert(node.left, point, !node.isVertical);
+            node.left = insert(node.left, point, !node.isVertical);
 
         else
-            node = insert(node.right, point, !node.isVertical);
+            node.right = insert(node.right, point, !node.isVertical);
 
         return node;
     }
@@ -104,15 +103,12 @@ public class KdTree {
 
     // unit testing of the methods (optional)
     public static void main(String[] args) {
-        KdTree set = new KdTree();
-        set.insert(new Point2D(0.125, 0.3));
-        System.out.println(set.size);
-        set.insert(new Point2D(0.3, 0.4));
-        System.out.println(set.size);
-
-        System.out.println(set.root.x+", "+set.root.y);
-
-        System.out.println(set.contains(new Point2D(0.125, 0.3)));
+//        KdTree set = new KdTree();
+//        set.insert(new Point2D(0.125, 0.3));
+//        set.insert(new Point2D(0.3, 0.4));
+//        System.out.println(set.size);
+//        System.out.println(set.root.x+", "+set.root.y);
+//        System.out.println(set.contains(new Point2D(0.125, 0.3)));
 
     }
 }

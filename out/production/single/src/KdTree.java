@@ -44,8 +44,8 @@ public class KdTree {
     // add the point to the set (if it is not already in the set)
     public void insert(Point2D p) {
         if (p == null) throw new IllegalArgumentException();
-        insert(root, p, true);
-//        root = insert(root, p, true);
+//        insert(root, p, true);
+        root = insert(root, p, true);
     }
 
     private Node insert(Node node, Point2D point, boolean isVertical) {
@@ -62,10 +62,10 @@ public class KdTree {
 
 
         if ((node.isVertical == true && node.x < point.x()) || (node.isVertical == false && node.y < point.y()))
-            node = insert(node.left, point, !node.isVertical);
+            node.left = insert(node.left, point, !node.isVertical);
 
         else
-            node = insert(node.right, point, !node.isVertical);
+            node.right = insert(node.right, point, !node.isVertical);
 
         return node;
     }
