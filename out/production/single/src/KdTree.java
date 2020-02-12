@@ -1,5 +1,6 @@
 import edu.princeton.cs.algs4.Point2D;
 import edu.princeton.cs.algs4.RectHV;
+import org.w3c.dom.css.Rect;
 
 import java.util.ArrayList;
 
@@ -124,10 +125,10 @@ public class KdTree {
         if (p == null) throw new IllegalArgumentException();
         if (root == null) return null;
 
-        return nearest(root, p, null);
+        return nearest(root, new RectHV(0, 0, 1, 1), p, null);
     }
 
-    private Point2D nearest(Node startNode, Point2D query, Point2D candidate) {
+    private Point2D nearest(Node startNode, RectHV bound, Point2D query, Point2D candidate) {
         if (startNode == null) return candidate;
 
         Point2D nearestPoint = candidate;
@@ -135,12 +136,8 @@ public class KdTree {
         double distanceToBound = 0;
 
         if (nearestPoint != null) {
-            nearestDistance = query.distanceSquaredTo(nearestPoint);
-            if (startNode.isVertical) {
-                distanceToBound = Math.pow(query.x() - startNode.point.x(), 2);
-            } else {
-                distanceToBound = Math.pow(query.y() - startNode.point.y(), 2);
-            }
+            nearestDistance = nearestPoint.distanceSquaredTo(query);
+            distanceToBound = bound.distanceSquaredTo(query);
         }
 
         if (nearestPoint == null || distanceToBound < nearestDistance) {
@@ -148,20 +145,24 @@ public class KdTree {
                 nearestPoint = startNode.point;
             }
             if (startNode.isVertical) {
+                RectHV leftBound = new RectHV(bound.xmin(), bound.ymin(), startNode.point.x(), bound.ymax());
+                RectHV rightBound = new RectHV(startNode.point.x(), bound.ymin(), bound.xmax(), bound.ymax());
                 if (query.x() <= startNode.point.x()) {
-                    nearestPoint = nearest(startNode.left, query, nearestPoint);
-                    nearestPoint = nearest(startNode.right, query, nearestPoint);
+                    nearestPoint = nearest(startNode.left, leftBound, query, nearestPoint);
+                    nearestPoint = nearest(startNode.right, rightBound, query, nearestPoint);
                 } else {
-                    nearestPoint = nearest(startNode.right, query, nearestPoint);
-                    nearestPoint = nearest(startNode.left, query, nearestPoint);
+                    nearestPoint = nearest(startNode.right, rightBound, query, nearestPoint);
+                    nearestPoint = nearest(startNode.left, leftBound, query, nearestPoint);
                 }
             } else {
+                RectHV leftBound = new RectHV(bound.xmin(), bound.ymin(), bound.xmax(), startNode.point.y());
+                RectHV rightBound = new RectHV(bound.xmin(), startNode.point.y(), bound.xmax(), bound.ymax());
                 if (query.y() <= startNode.point.y()) {
-                    nearestPoint = nearest(startNode.left, query, nearestPoint);
-                    nearestPoint = nearest(startNode.right, query, nearestPoint);
+                    nearestPoint = nearest(startNode.left, leftBound, query, nearestPoint);
+                    nearestPoint = nearest(startNode.right, rightBound, query, nearestPoint);
                 } else {
-                    nearestPoint = nearest(startNode.right, query, nearestPoint);
-                    nearestPoint = nearest(startNode.left, query, nearestPoint);
+                    nearestPoint = nearest(startNode.right, rightBound, query, nearestPoint);
+                    nearestPoint = nearest(startNode.left, leftBound, query, nearestPoint);
                 }
             }
         }
@@ -177,7 +178,7 @@ public class KdTree {
         set.insert(new Point2D(0.2, 0.3));
         set.insert(new Point2D(0.4, 0.7));
         set.insert(new Point2D(0.9, 0.6));
-        System.out.println(set.nearest(new Point2D(0.181, 0.441)));
+        System.out.println(set.nearest(new Point2D(0.389, 0.03)));
 
 
     }
