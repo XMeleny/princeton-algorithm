@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f7a7e9d-821a-4678-8555-ad7271ad5fb3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/KdTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PointSET.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/KdTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/KdTree.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -79,9 +78,16 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.PointSET">
+  <component name="RunManager" selected="Application.KdTree">
     <configuration name="Board" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Board" />
+      <module name="single" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KdTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="KdTree" />
       <module name="single" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -101,13 +107,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Solver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Solver" />
-      <module name="single" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TweetCounts" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="TweetCounts" />
       <module name="single" />
@@ -117,11 +116,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.KdTree" />
         <item itemvalue="Application.PointSET" />
         <item itemvalue="Application.TweetCounts" />
         <item itemvalue="Application.Solution" />
         <item itemvalue="Application.Board" />
-        <item itemvalue="Application.Solver" />
       </list>
     </recent_temporary>
   </component>
@@ -152,7 +151,7 @@
       <workItem from="1581047175520" duration="19754000" />
       <workItem from="1581172358979" duration="6338000" />
       <workItem from="1581214684579" duration="6900000" />
-      <workItem from="1581317842324" duration="1661000" />
+      <workItem from="1581317842324" duration="23882000" />
     </task>
     <servers />
   </component>
