@@ -1,6 +1,5 @@
 import edu.princeton.cs.algs4.Point2D;
 import edu.princeton.cs.algs4.RectHV;
-import org.w3c.dom.css.Rect;
 
 import java.util.ArrayList;
 
@@ -172,13 +171,13 @@ public class KdTree {
 
     //     unit testing of the methods (optional)
     public static void main(String[] args) {
-        KdTree set = new KdTree();
-        set.insert(new Point2D(0.7, 0.2));
-        set.insert(new Point2D(0.5, 0.4));
-        set.insert(new Point2D(0.2, 0.3));
-        set.insert(new Point2D(0.4, 0.7));
-        set.insert(new Point2D(0.9, 0.6));
-        System.out.println(set.nearest(new Point2D(0.389, 0.03)));
+//        KdTree set = new KdTree();
+//        set.insert(new Point2D(0.7, 0.2));
+//        set.insert(new Point2D(0.5, 0.4));
+//        set.insert(new Point2D(0.2, 0.3));
+//        set.insert(new Point2D(0.4, 0.7));
+//        set.insert(new Point2D(0.9, 0.6));
+//        System.out.println(set.nearest(new Point2D(0.389, 0.03)));
 
 
     }
