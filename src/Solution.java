@@ -1,9 +1,6 @@
 import edu.princeton.cs.algs4.In;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 class Solution {
     public int numberOfSteps(int num) {
@@ -165,6 +162,69 @@ class Solution {
 //            System.out.println(" the dis is " + dis);
         }
         return result;
+    }
+
+
+    /**
+     * Definition for a binary tree node.
+     * public class TreeNode {
+     * int val;
+     * TreeNode left;
+     * TreeNode right;
+     * TreeNode(int x) { val = x; }
+     * }
+     */
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode(int x) {
+            val = x;
+        }
+    }
+
+    public List<Integer> preorderTraversal(TreeNode root) {
+        ArrayList<Integer> result = new ArrayList<>();
+        traversal(result, root);
+        return result;
+    }
+
+    private void traversal(List<Integer> list, TreeNode node) {
+        //preOrder
+//        if (node == null) return;
+//
+//        list.add(node.val);
+//        traversal(list,node.left);
+//        traversal(list,node.right);
+
+        //inOrder
+        if (node == null) return;
+
+        traversal(list, node.left);
+        list.add(node.val);
+        traversal(list, node.right);
+    }
+
+
+    public List<List<Integer>> levelOrder(TreeNode root) {
+        List<List<Integer>> result = new ArrayList<>();
+        levelTraversal(result, root, 0);
+        return result;
+    }
+
+    private void levelTraversal(List<List<Integer>> result, TreeNode node, int level) {
+        if (node == null) return;
+
+        if (result.size()==level) {
+            ArrayList<Integer> current = new ArrayList<>();
+            current.add(node.val);
+            result.add(current);
+        } else {
+            result.get(level).add(node.val);
+        }
+        levelTraversal(result, node.left, level + 1);
+        levelTraversal(result, node.right, level + 1);
     }
 
     public static void main(String[] args) {
