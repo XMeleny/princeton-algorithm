@@ -2,18 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f7a7e9d-821a-4678-8555-ad7271ad5fb3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Outcast.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ProductOfNumbers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/digraph1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/single/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/KdTree$Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/KdTree$Node.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/KdTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/KdTree.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/Solution$Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/Solution$Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/ProductOfNumbers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/SAP.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/SAP.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/single/Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/Solution.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/src/KdTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/src/KdTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/Start.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/WordNet$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/WordNet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/WordNet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/src/ProductOfNumbers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/src/SAP.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/src/SAP.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/single/src/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/src/Solution.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/src/Start.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/src/WordNet.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/src/WordNet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SAP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SAP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Solution.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WordNet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WordNet.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,7 +64,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/algs4.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -76,6 +78,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Meleny\IdeaProjects\single\src" />
       <recent name="C:\Users\Meleny\IdeaProjects\single" />
     </key>
   </component>
@@ -91,14 +94,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Solution">
-    <configuration name="KdTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="KdTree" />
-      <module name="single" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.SAP">
     <configuration name="Outcast" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Outcast" />
       <module name="single" />
@@ -108,6 +104,13 @@
     </configuration>
     <configuration name="ProductOfNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ProductOfNumbers" />
+      <module name="single" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SAP" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SAP" />
       <module name="single" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -129,11 +132,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SAP" />
+        <item itemvalue="Application.WordNet" />
         <item itemvalue="Application.Solution" />
         <item itemvalue="Application.ProductOfNumbers" />
         <item itemvalue="Application.Outcast" />
-        <item itemvalue="Application.WordNet" />
-        <item itemvalue="Application.KdTree" />
       </list>
     </recent_temporary>
   </component>
@@ -167,7 +170,8 @@
       <workItem from="1581317842324" duration="38208000" />
       <workItem from="1581508985512" duration="1004000" />
       <workItem from="1581689162841" duration="7188000" />
-      <workItem from="1581815641855" duration="12201000" />
+      <workItem from="1581815641855" duration="15417000" />
+      <workItem from="1581906483530" duration="19288000" />
     </task>
     <servers />
   </component>
@@ -186,16 +190,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Solution.java</url>
-          <line>5</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

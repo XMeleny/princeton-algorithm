@@ -15,7 +15,7 @@ public class WordNet {
     private final HashMap<String, ArrayList<Integer>> nouns;
     private final Iterable<Integer> path;
 
-    // constructor takes the name of the two input files
+    // constructor takes the name of the two input file
     public WordNet(String synsets, String hypernyms) {
         if (synsets == null || hypernyms == null) throw new IllegalArgumentException();
 
