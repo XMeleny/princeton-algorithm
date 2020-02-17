@@ -13,10 +13,12 @@ public class WordNet {
     private final ST<Integer, String[]> symbolTable;
     private final Digraph digraph;
     private final HashMap<String, ArrayList<Integer>> nouns;
+    private final Iterable<Integer> path;
 
     // constructor takes the name of the two input files
     public WordNet(String synsets, String hypernyms) {
         if (synsets == null || hypernyms == null) throw new IllegalArgumentException();
+
         //init
         symbolTable = new ST<>();
         nouns = new HashMap<>();
@@ -65,6 +67,9 @@ public class WordNet {
 
         DirectedCycle directedCycle = new DirectedCycle(digraph);
         if (numOfRoot > 1 || directedCycle.hasCycle()) throw new IllegalArgumentException();
+
+        DepthFirstOrder dfo = new DepthFirstOrder(digraph);
+        path = dfo.reversePost();
     }
 
     // returns all WordNet nouns
@@ -86,16 +91,11 @@ public class WordNet {
         ArrayList<Integer> idOfA = nouns.get(nounA);
         ArrayList<Integer> idOfB = nouns.get(nounB);
 
-        Iterable<Integer> ancestorOfA;
-
-        DepthFirstOrder dfo = new DepthFirstOrder(digraph);
-        ancestorOfA = dfo.reversePost();
-
         int result = Integer.MAX_VALUE;
         BreadthFirstDirectedPaths a = new BreadthFirstDirectedPaths(digraph, idOfA);
         BreadthFirstDirectedPaths b = new BreadthFirstDirectedPaths(digraph, idOfB);
 
-        for (int item : ancestorOfA) {
+        for (int item : path) {
             if (a.hasPathTo(item) && b.hasPathTo(item)) {
                 int dis = a.distTo(item) + b.distTo(item);
                 result = Math.min(result, dis);
@@ -113,23 +113,17 @@ public class WordNet {
         ArrayList<Integer> idOfA = nouns.get(nounA);
         ArrayList<Integer> idOfB = nouns.get(nounB);
 
-        Iterable<Integer> ancestorOfA;
-
-        DepthFirstOrder dfo = new DepthFirstOrder(digraph);
-        ancestorOfA = dfo.reversePost();
-
         int minDis = Integer.MAX_VALUE;
         String result = null;
         BreadthFirstDirectedPaths a = new BreadthFirstDirectedPaths(digraph, idOfA);
         BreadthFirstDirectedPaths b = new BreadthFirstDirectedPaths(digraph, idOfB);
 
-        for (int item : ancestorOfA) {
+        for (int item : path) {
             if (a.hasPathTo(item) && b.hasPathTo(item)) {
                 int dis = a.distTo(item) + b.distTo(item);
                 if (dis < minDis) {
                     minDis = dis;
                     result = String.join(" ", symbolTable.get(item));
-
                 }
             }
         }
@@ -142,6 +136,5 @@ public class WordNet {
 //        WordNet wordNet=new WordNet("synsets.txt","hypernyms.txt");
 //        System.out.println(wordNet.distance("quellung","Cyrtomium_aculeatum"));//12
 //        System.out.println(wordNet.sap("quellung","Cyrtomium_aculeatum"));
-
     }
 }
