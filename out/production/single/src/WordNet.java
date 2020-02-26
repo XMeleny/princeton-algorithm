@@ -133,8 +133,5 @@ public class WordNet {
 
     // do unit testing of this class
     public static void main(String[] args) {
-//        WordNet wordNet=new WordNet("synsets.txt","hypernyms.txt");
-//        System.out.println(wordNet.distance("quellung","Cyrtomium_aculeatum"));//12
-//        System.out.println(wordNet.sap("quellung","Cyrtomium_aculeatum"));
     }
 }

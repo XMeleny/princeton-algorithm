@@ -2,21 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f7a7e9d-821a-4678-8555-ad7271ad5fb3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/digraph1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Codec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ListNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SeamCarver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TreeNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/.idea/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/single/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/ProductOfNumbers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/CheckInit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/Outcast.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/Outcast.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/single/SAP.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/SAP.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/single/Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/Solution.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/Start.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/WordNet$Node.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/single/WordNet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/WordNet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/src/ProductOfNumbers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/digraph1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/hypernyms.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/src/CheckInit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/src/Outcast.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/src/Outcast.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/single/src/SAP.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/src/SAP.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/single/src/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/src/Solution.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/src/Start.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/single/src/WordNet.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/src/WordNet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SAP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SAP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WordNet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WordNet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/src/digraph1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/src/hypernyms.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/src/synsets.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/synsets.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Solution.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -75,6 +83,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -94,16 +103,16 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SAP">
-    <configuration name="Outcast" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Outcast" />
+  <component name="RunManager" selected="Application.Solution">
+    <configuration name="MinStack" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MinStack" />
       <module name="single" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductOfNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ProductOfNumbers" />
+    <configuration name="Outcast" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Outcast" />
       <module name="single" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -132,11 +141,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Solution" />
+        <item itemvalue="Application.MinStack" />
+        <item itemvalue="Application.Outcast" />
         <item itemvalue="Application.SAP" />
         <item itemvalue="Application.WordNet" />
-        <item itemvalue="Application.Solution" />
-        <item itemvalue="Application.ProductOfNumbers" />
-        <item itemvalue="Application.Outcast" />
       </list>
     </recent_temporary>
   </component>
@@ -171,7 +180,18 @@
       <workItem from="1581508985512" duration="1004000" />
       <workItem from="1581689162841" duration="7188000" />
       <workItem from="1581815641855" duration="15417000" />
-      <workItem from="1581906483530" duration="19288000" />
+      <workItem from="1581906483530" duration="22321000" />
+      <workItem from="1581944645796" duration="6897000" />
+      <workItem from="1581992225953" duration="17693000" />
+      <workItem from="1582079358000" duration="9973000" />
+      <workItem from="1582165974342" duration="9369000" />
+      <workItem from="1582211946060" duration="2353000" />
+      <workItem from="1582244584215" duration="9475000" />
+      <workItem from="1582339050568" duration="5705000" />
+      <workItem from="1582374334053" duration="12424000" />
+      <workItem from="1582422048232" duration="9075000" />
+      <workItem from="1582511784491" duration="11211000" />
+      <workItem from="1582592273362" duration="688000" />
     </task>
     <servers />
   </component>
