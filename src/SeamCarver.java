@@ -89,6 +89,7 @@ public class SeamCarver {
             if (x < width() - 1) {
                 if (distTo[x + 1][y - 1] + energy < distTo[x][y]) {
                     distTo[x][y] = distTo[x + 1][y - 1] + energy;
+                    edgeTo[x][y] = x + 1;
                 }
             }
         }
@@ -117,7 +118,7 @@ public class SeamCarver {
         //handle
         for (int col = 1; col < width; col++) {
             for (int row = 0; row < height; row++) {
-                relax(row, col, true, distTo, edgeTo);
+                relax(col, row, true, distTo, edgeTo);
             }
         }
 
