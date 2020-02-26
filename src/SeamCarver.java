@@ -142,7 +142,45 @@ public class SeamCarver {
 
     // sequence of indices for vertical seam
     public int[] findVerticalSeam() {
-        int[] seam = new int[height()];
+        int width = width();
+        int height = height();
+
+        int[] seam = new int[height];
+
+        double[][] distTo = new double[width][height];
+        int[][] edgeTo = new int[width][height];
+
+        //init
+        for (int row = 1; row < height; row++) {
+            for (int col = 0; col < width; col++) {
+                distTo[col][row] = Double.POSITIVE_INFINITY;
+            }
+        }
+        for (int col = 0; col < width; col++) {
+            distTo[col][0] = 1000;
+        }
+
+        //handle
+        for (int row = 1; row < height; row++) {
+            for (int col = 0; col < width; col++) {
+                relax(col, row, false, distTo, edgeTo);
+            }
+        }
+
+        double minDist = Double.POSITIVE_INFINITY;
+        int last = 1;
+        //get the smallest position
+        for (int i = 0; i < width; i++) {
+            if (distTo[i][height - 1] < minDist) {
+                minDist = distTo[i][height - 1];
+                last = i;
+            }
+        }
+
+        seam[height - 1] = last;
+        for (int i = height - 2; i >= 0; i--) {
+            seam[i] = edgeTo[seam[i + 1]][i + 1];
+        }
 
         return seam;
     }
@@ -152,12 +190,27 @@ public class SeamCarver {
         if (height() <= 1) throw new IllegalArgumentException();
         if (seam == null || seam.length != width()) throw new IllegalArgumentException();
 
-        for (int i = 0; i < height(); i++) {
-
+        for (int i = 0; i < seam.length; i++) {
+            if (!(0 <= seam[i] && seam[i] < height()))
+                throw new IllegalArgumentException();
+            if (i < seam.length - 1 && Math.abs(seam[i] - seam[i + 1]) > 1)
+                throw new IllegalArgumentException();
         }
 
-        //copy and paste
+        //下面的移到上面来
+        Picture result = new Picture(width(), height() - 1);
 
+        for (int col = 0; col < width(); col++) {
+            for (int row = 0; row < height() - 1; row++) {
+                if (row < seam[col]) {
+                    result.set(col, row, picture.get(col, row));
+                } else {
+                    result.set(col, row, picture.get(col, row + 1));
+                }
+            }
+        }
+
+        picture = result;
     }
 
     // remove vertical seam from current picture
@@ -165,7 +218,27 @@ public class SeamCarver {
         if (width() <= 1) throw new IllegalArgumentException();
         if (seam == null || seam.length != height()) throw new IllegalArgumentException();
 
-        //copy and paste
+        for (int i = 0; i < seam.length; i++) {
+            if (!(0 <= seam[i] && seam[i] < width()))
+                throw new IllegalArgumentException();
+            if (i < seam.length - 1 && Math.abs(seam[i] - seam[i + 1]) > 1)
+                throw new IllegalArgumentException();
+        }
+
+        //右边的移到左边来
+        Picture result = new Picture(width() - 1, height());
+
+        for (int row = 0; row < height(); row++) {
+            for (int col = 0; col < width() - 1; col++) {
+                if (col < seam[row]) {
+                    result.set(col, row, picture.get(col, row));
+                } else {
+                    result.set(col, row, picture.get(col + 1, row));
+                }
+            }
+        }
+
+        picture = result;
 
     }
 
