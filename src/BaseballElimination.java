@@ -4,15 +4,20 @@ import edu.princeton.cs.algs4.FordFulkerson;
 import edu.princeton.cs.algs4.In;
 
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
 
 public class BaseballElimination {
 
     private final int num;
     private final HashMap<String, Integer> teams;
+    private final String[] names;
     private final int[] wins;
     private final int[] losses;
     private final int[] remains;
     private final int[][] games;
+    private final HashMap<String, Set<String>> eliminate;
+
 
     // create a baseball division from given filename in format specified below
     public BaseballElimination(String filename) {
@@ -22,13 +27,17 @@ public class BaseballElimination {
         num = in.readInt();
 
         teams = new HashMap<>();
+        names = new String[num];
         wins = new int[num];
         losses = new int[num];
         remains = new int[num];
         games = new int[num][num];
+        eliminate = new HashMap<>();
 
         for (int i = 0; i < num; i++) {
-            teams.put(in.readString(), i);
+            String name = in.readString();
+            teams.put(name, i);
+            names[i] = name;
             wins[i] = in.readInt();
             losses[i] = in.readInt();
             remains[i] = in.readInt();
@@ -36,6 +45,7 @@ public class BaseballElimination {
                 games[i][j] = in.readInt();
             }
         }
+        testTrivialElimination();
     }
 
     // number of teams
@@ -79,44 +89,80 @@ public class BaseballElimination {
         if (!teams.containsKey(team)) throw new IllegalArgumentException();
         int order = teams.get(team);
 
+        //平凡淘汰
+        if (eliminate.containsKey(team)) return true;
+
+        //非平凡淘汰
         int V = 2 + num * num + num;
         int s = num + num * num;
         int t = num + num * num + 1;
 
         FlowNetwork flowNetwork = new FlowNetwork(V);
-
+        int sum = 0;
         for (int i = 0; i < num; i++) {
-            if (i == order) continue;
+            if (i == order || eliminate.containsKey(i)) continue;
             for (int j = i + 1; j < num; j++) {
-                if (j == order) continue;
+                if (j == order || eliminate.containsKey(j) || games[i][j] <= 0) continue;
+
                 int game = num + num * i + j;
-                //from s to game
+
+                //add edges from s to game
                 flowNetwork.addEdge(new FlowEdge(s, game, games[i][j]));
-                //from game to team
+                sum += games[i][j];
+
+                //add edges from game to team
                 flowNetwork.addEdge(new FlowEdge(game, i, Integer.MAX_VALUE));
                 flowNetwork.addEdge(new FlowEdge(game, j, Integer.MAX_VALUE));
             }
-        }
 
-        //add edges from team to t
-        for (int i = 0; i < num; i++) {
-            if (i == order) continue;
-            flowNetwork.addEdge(new FlowEdge(i, t, wins[order] + remains[order] - wins[i]));
+            //add edges from team to t
+            if (wins[order] + remains[order] - wins[i] > 0)
+                flowNetwork.addEdge(new FlowEdge(i, t, wins[order] + remains[order] - wins[i]));
         }
 
         FordFulkerson fordFulkerson = new FordFulkerson(flowNetwork, s, t);
 
-        //if every game in the min cut, then the team is eliminated
-        for (int i = 0; i < num; i++) {
-            if (i == order) continue;
-            if (!fordFulkerson.inCut(i)) return true;
+        //假如maxFlow不为剩余game总和，意味着有一些队伍没有进行完比赛就已经成功淘汰该队伍
+        if (fordFulkerson.value() < sum) {
+            Set<String> set = new HashSet<>();
+            for (int i = 0; i < num; i++) {
+                if (fordFulkerson.inCut(i)) {
+                    set.add(names[i]);
+                }
+            }
+            eliminate.put(team, set);
+
+            return true;
         }
         return false;
     }
 
+    private void testTrivialElimination() {
+        HashSet<String> set;
+        for (int i = 0; i < num; i++) {
+            set = new HashSet<>();
+            int max = wins[i] + remains[i];
+            for (int j = 0; j < num; j++) {
+                if (i == j) continue;
+                if (wins[j] > max) {
+                    set.add(names[j]);
+                }
+            }
+            if (!set.isEmpty()) {
+//                System.out.println(names[i]+"is trivial");
+                eliminate.put(names[i], set);
+            }
+        }
+    }
+
+
     // subset R of teams that eliminates given team; null if not eliminated
     public Iterable<String> certificateOfElimination(String team) {
+        if (isEliminated(team)) return eliminate.get(team);
         return null;
+    }
+
+    public static void main(String[] args) {
 
     }
 
