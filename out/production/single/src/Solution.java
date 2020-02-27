@@ -1,5 +1,3 @@
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.*;
 
 class Solution {
@@ -79,23 +77,21 @@ class Solution {
 
 
     public boolean wordBreak(String s, List<String> wordDict) {
-        HashSet<String> set = new HashSet<>(wordDict);
+        return search(s, 0, new HashSet<>(wordDict), new Boolean[s.length()]);
+    }
 
-        boolean[] dp = new boolean[s.length() + 1];
+    public boolean search(String s, int start, HashSet<String> set, Boolean[] check) {
+        if (start == s.length()) return true;
 
-        dp[0] = true;
+        if (check[start] != null) return check[start];
 
-        for (int i = 1; i <= s.length(); i++) {
-            for (int j = 1; j <= i; j++) {
-                if (set.contains(s.substring(0, j)) && set.contains(s.substring(j, i))) {
-                    dp[i] = true;
-                    break;
-                }
+        for (String str : set) {
+            if (s.startsWith(str, start) && search(s, start + str.length(), set, check)) {
+                return check[start] = true;
             }
         }
 
-
-        return dp[s.length()];
+        return check[start] = false;
     }
 
 
@@ -120,8 +116,8 @@ class Solution {
 //        s.wordBreak("leetcode", list);
 //        System.out.println(s.wordBreak("a", list));
 
-        String str="hello";
-        System.out.println(str.substring(0,1));
+        String str = "hello";
+        System.out.println(str.substring(0, 1));
 
     }
 

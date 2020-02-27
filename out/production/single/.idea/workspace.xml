@@ -2,29 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f7a7e9d-821a-4678-8555-ad7271ad5fb3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Codec.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ListNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SeamCarver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TreeNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/CheckInit.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/Outcast.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/Outcast.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/SAP.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/SAP.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/Solution.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/WordNet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/WordNet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/digraph1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/hypernyms.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/src/CheckInit.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/src/Outcast.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/src/Outcast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/src/SAP.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/src/SAP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/src/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/src/Solution.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/src/WordNet.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/src/WordNet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/src/digraph1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/src/hypernyms.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/src/synsets.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/synsets.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Solution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/teams4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BaseballElimination.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BaseballElimination.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -191,7 +170,10 @@
       <workItem from="1582374334053" duration="12424000" />
       <workItem from="1582422048232" duration="9075000" />
       <workItem from="1582511784491" duration="11211000" />
-      <workItem from="1582592273362" duration="688000" />
+      <workItem from="1582592273362" duration="9277000" />
+      <workItem from="1582675979359" duration="17894000" />
+      <workItem from="1582730629885" duration="721000" />
+      <workItem from="1582770307251" duration="1908000" />
     </task>
     <servers />
   </component>
@@ -210,5 +192,19 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/BaseballElimination.java</url>
+          <line>16</line>
+          <properties class="BaseballElimination" method="&lt;init&gt;">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
