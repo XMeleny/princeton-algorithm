@@ -95,6 +95,79 @@ class Solution {
     }
 
 
+    public int[] smallerNumbersThanCurrent(int[] nums) {
+        int[] result = new int[nums.length];
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = 0; j < nums.length; j++) {
+                if (i == j) continue;
+                if (nums[j] < nums[i]) result[i]++;
+            }
+        }
+        return result;
+    }
+
+    public String rankTeams(String[] votes) {
+        HashMap<Character, int[]> map = new HashMap<>();
+
+        char[] result = new char[votes[0].length()];
+
+        for (String string : votes) {
+            for (int i = 0; i < string.length(); i++) {
+                char ch = string.charAt(i);
+                if (map.containsKey(ch)) {
+                    map.get(ch)[i]++;
+                } else {
+                    int[] temp = new int[26];
+                    temp[i] = 1;
+                    map.put(ch, temp);
+                }
+            }
+        }
+
+        return new String(result);
+    }
+
+    public boolean isSubPath(ListNode head, TreeNode root) {
+        return dfs(head, root, new Stack<>());
+    }
+
+    private boolean dfs(ListNode head, TreeNode root, Stack<Integer> integerStack) {
+        if (root == null) return false;
+
+        integerStack.push(root.val);
+
+        if (check(head, integerStack)) return true;
+
+        if (root.left == null && root.right == null) {
+            integerStack.pop();
+            return false;
+        }
+
+        if (dfs(head, root.left, integerStack) || dfs(head, root.right, integerStack)) return true;
+
+        integerStack.pop();
+        return false;
+    }
+
+    private boolean check(ListNode head, Stack<Integer> stack) {
+        if (head == null) return true;
+        if (stack == null) return false;
+
+
+        ListNode cur = head;
+        for (int i = 0; i < stack.size(); i++) {
+            for (int j = i; j < stack.size(); j++) {
+                if (cur == null) return true;
+                if (stack.get(j) == cur.val) cur = cur.next;
+                else break;
+            }
+            if (cur == null) return true;
+            cur = head;
+        }
+        return false;
+    }
+
+
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -103,21 +176,7 @@ class Solution {
 
     public static void main(String[] args) {
         Solution s = new Solution();
-//        ArrayList<Integer> test = new ArrayList<>();
-//        s.divide(test, 8);
-//        s.divide(test, 1000);
-//        s.separate(test);
 
-
-        List<String> list = new LinkedList<>();
-//        list.add("leet");
-//        list.add("code");
-        list.add("b");
-//        s.wordBreak("leetcode", list);
-//        System.out.println(s.wordBreak("a", list));
-
-        String str = "hello";
-        System.out.println(str.substring(0, 1));
 
     }
 

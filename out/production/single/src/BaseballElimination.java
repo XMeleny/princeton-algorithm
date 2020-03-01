@@ -90,11 +90,7 @@ public class BaseballElimination {
         int order = teams.get(team);
 
         //平凡淘汰
-
-        if (eliminate.containsKey(team)) {
-//            System.out.println(team + " is trivial");
-            return true;
-        }
+        if (eliminate.containsKey(team)) return true;
 
         //非平凡淘汰
         int V = 2 + num * num + num;
@@ -128,7 +124,6 @@ public class BaseballElimination {
 
         //假如maxFlow不为剩余game总和，意味着有一些队伍没有进行完比赛就已经成功淘汰该队伍
         if (fordFulkerson.value() < sum) {
-//            System.out.println(team + " is not trivial");
             Set<String> set = new HashSet<>();
             for (int i = 0; i < num; i++) {
                 if (fordFulkerson.inCut(i)) {
@@ -136,8 +131,6 @@ public class BaseballElimination {
                 }
             }
             eliminate.put(team, set);
-
-
 
             return true;
         }
@@ -170,31 +163,6 @@ public class BaseballElimination {
     }
 
     public static void main(String[] args) {
-//        BaseballElimination baseballElimination = new BaseballElimination("teams4b.txt");
-//        System.out.println(baseballElimination.isEliminated("Hufflepuff"));//true
-
-        BaseballElimination baseballElimination = new BaseballElimination("teams4.txt");
-        for(String item:baseballElimination.certificateOfElimination("Philadelphia")){
-            System.out.println(item);
-        }
-        System.out.println();
-        for(String item:baseballElimination.certificateOfElimination("Montreal")){
-            System.out.println(item);
-        }
-//        System.out.println(baseballElimination.isEliminated("Atlanta"));//false
-//        System.out.println(baseballElimination.isEliminated("Philadelphia"));//true, 0 2
-//        System.out.println(baseballElimination.isEliminated("New_York"));//false
-//        System.out.println(baseballElimination.isEliminated("Montreal"));//true, 0
-
-
-
-
-//        System.out.println("Philadelphia: ");
-//        baseballElimination.isEliminated("Philadelphia");
-//        System.out.println();
-//
-//        System.out.println("Montreal: ");
-//        baseballElimination.isEliminated("Montreal");//true, 0
 
     }
 

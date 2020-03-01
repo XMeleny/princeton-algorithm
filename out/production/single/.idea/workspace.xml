@@ -2,8 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f7a7e9d-821a-4678-8555-ad7271ad5fb3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/teams4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BaseballElimination.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BaseballElimination.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BoggleBoard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BoggleSolver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/board-q.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/board4x4.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dictionary-algs4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/BaseballElimination.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/BaseballElimination.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/Codec$TreeNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/Codec.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/Solution.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/src/BaseballElimination.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/src/BaseballElimination.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/src/Codec.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/src/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/src/Solution.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/src/teams4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/src/teams4b.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/teams4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/teams4b.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Codec.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Solution.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +99,21 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Solution">
+  <component name="RunManager" selected="Application.BoggleSolver">
+    <configuration name="BaseballElimination" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BaseballElimination" />
+      <module name="single" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BoggleSolver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BoggleSolver" />
+      <module name="single" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MinStack" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MinStack" />
       <module name="single" />
@@ -97,13 +128,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SAP" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="SAP" />
-      <module name="single" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Solution" />
       <module name="single" />
@@ -111,20 +135,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WordNet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="WordNet" />
-      <module name="single" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BoggleSolver" />
+        <item itemvalue="Application.BaseballElimination" />
         <item itemvalue="Application.Solution" />
         <item itemvalue="Application.MinStack" />
         <item itemvalue="Application.Outcast" />
-        <item itemvalue="Application.SAP" />
-        <item itemvalue="Application.WordNet" />
       </list>
     </recent_temporary>
   </component>
@@ -173,7 +190,9 @@
       <workItem from="1582592273362" duration="9277000" />
       <workItem from="1582675979359" duration="17894000" />
       <workItem from="1582730629885" duration="721000" />
-      <workItem from="1582770307251" duration="1908000" />
+      <workItem from="1582770307251" duration="17256000" />
+      <workItem from="1582988314330" duration="174000" />
+      <workItem from="1583025844447" duration="19534000" />
     </task>
     <servers />
   </component>
@@ -192,19 +211,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/BaseballElimination.java</url>
-          <line>16</line>
-          <properties class="BaseballElimination" method="&lt;init&gt;">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
