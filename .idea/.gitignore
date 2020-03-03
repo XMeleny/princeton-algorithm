@@ -1,6 +1,10 @@
-# Default ignored files
-/workspace.xml
-.class
-.txt
+#过滤文件夹target,.idea
+/target
+/.idea
 /out
+*.iml
+
+#编译文件
+*.class
+
 

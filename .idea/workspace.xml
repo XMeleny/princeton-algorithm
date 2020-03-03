@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0f7a7e9d-821a-4678-8555-ad7271ad5fb3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abra.txt" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\Meleny\IdeaProjects\single\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Wt24xypPiZO98qiGcgwvv8Au5l" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Meleny\IdeaProjects\single\src" />
+      <recent name="C:\Users\Meleny\IdeaProjects\single" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.BurrowsWheeler">
+    <configuration name="BaseballElimination" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BaseballElimination" />
+      <module name="single" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BoggleSolver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BoggleSolver" />
+      <module name="single" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BurrowsWheeler" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BurrowsWheeler" />
+      <module name="single" />
+      <option name="PROGRAM_PARAMETERS" value="-" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CircularSuffixArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CircularSuffixArray" />
+      <module name="single" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MoveToFront" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MoveToFront" />
+      <module name="single" />
+      <option name="PROGRAM_PARAMETERS" value="-" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.BaseballElimination" />
+      <item itemvalue="Application.BoggleSolver" />
+      <item itemvalue="Application.MoveToFront" />
+      <item itemvalue="Application.CircularSuffixArray" />
+      <item itemvalue="Application.BurrowsWheeler" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.BurrowsWheeler" />
+        <item itemvalue="Application.MoveToFront" />
+        <item itemvalue="Application.CircularSuffixArray" />
+        <item itemvalue="Application.BoggleSolver" />
+        <item itemvalue="Application.BaseballElimination" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0f7a7e9d-821a-4678-8555-ad7271ad5fb3" name="Default Changelist" comment="" />
+      <created>1579954382290</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1579954382290</updated>
+      <workItem from="1579954383636" duration="1678000" />
+      <workItem from="1580103799287" duration="747000" />
+      <workItem from="1580130948772" duration="2136000" />
+      <workItem from="1580192568236" duration="4032000" />
+      <workItem from="1580203382413" duration="2901000" />
+      <workItem from="1580276643855" duration="1213000" />
+      <workItem from="1580359535866" duration="12342000" />
+      <workItem from="1580449051316" duration="105000" />
+      <workItem from="1580457266163" duration="9946000" />
+      <workItem from="1580537693242" duration="2665000" />
+      <workItem from="1580548137853" duration="15081000" />
+      <workItem from="1580636453463" duration="12127000" />
+      <workItem from="1580706390614" duration="24164000" />
+      <workItem from="1580995755633" duration="7262000" />
+      <workItem from="1581047175520" duration="19754000" />
+      <workItem from="1581172358979" duration="6338000" />
+      <workItem from="1581214684579" duration="6900000" />
+      <workItem from="1581317842324" duration="38208000" />
+      <workItem from="1581508985512" duration="1004000" />
+      <workItem from="1581689162841" duration="7188000" />
+      <workItem from="1581815641855" duration="15417000" />
+      <workItem from="1581906483530" duration="22321000" />
+      <workItem from="1581944645796" duration="6897000" />
+      <workItem from="1581992225953" duration="17693000" />
+      <workItem from="1582079358000" duration="9973000" />
+      <workItem from="1582165974342" duration="9369000" />
+      <workItem from="1582211946060" duration="2353000" />
+      <workItem from="1582244584215" duration="9475000" />
+      <workItem from="1582339050568" duration="5705000" />
+      <workItem from="1582374334053" duration="12424000" />
+      <workItem from="1582422048232" duration="9075000" />
+      <workItem from="1582511784491" duration="11211000" />
+      <workItem from="1582592273362" duration="9277000" />
+      <workItem from="1582675979359" duration="17894000" />
+      <workItem from="1582730629885" duration="721000" />
+      <workItem from="1582770307251" duration="17256000" />
+      <workItem from="1582988314330" duration="174000" />
+      <workItem from="1583025844447" duration="22374000" />
+      <workItem from="1583156470840" duration="1398000" />
+      <workItem from="1583195482663" duration="1401000" />
+      <workItem from="1583202851377" duration="18940000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
