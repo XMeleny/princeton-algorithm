@@ -2,7 +2,6 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 public class CircularSuffixArray {
-    private String input;
     private Integer[] index;
 
     // circular suffix array of s

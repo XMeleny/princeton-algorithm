@@ -1,7 +1,7 @@
-import java.util.*;
+import java.util.Arrays;
+import java.util.Comparator;
 
 public class CircularSuffixArray {
-    private String input;
     private Integer[] index;
 
     // circular suffix array of s
@@ -47,10 +47,10 @@ public class CircularSuffixArray {
 
     // unit testing (required)
     public static void main(String[] args) {
-        CircularSuffixArray circularSuffixArray = new CircularSuffixArray("ABRACADABRA!");
-        for (int i = 0; i < circularSuffixArray.length(); i++) {
-            System.out.println(circularSuffixArray.index(i));
-        }
+//        CircularSuffixArray circularSuffixArray = new CircularSuffixArray("ABRACADABRA!");
+//        for (int i = 0; i < circularSuffixArray.length(); i++) {
+//            System.out.println(circularSuffixArray.index(i));
+//        }
     }
 
 }
