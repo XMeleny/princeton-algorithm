@@ -1,72 +1,53 @@
 import edu.princeton.cs.algs4.BinaryStdIn;
 import edu.princeton.cs.algs4.BinaryStdOut;
 
-import java.util.HashMap;
+import java.util.ArrayList;
 
 public class MoveToFront {
 
-    private static class Node {
-        char ch;
-        Node prev;
-        Node next;
-    }
-
-
     // apply move-to-front encoding, reading from standard input and writing to standard output
     public static void encode() {
-        HashMap<Character, Node> map = new HashMap<>();
-        Node head = null;
-        Node curr = null;
+        //init
+        ArrayList<Character> list = new ArrayList<>();
+        for (char c = 0; c < 256; c++) {
+            list.add(c);
+        }
+
+        //handle
         while (!BinaryStdIn.isEmpty()) {
-            char ch = BinaryStdIn.readChar();
-            //todo
-            curr = null;
-            if (map.containsKey(ch)) {
-                curr = map.get(ch);
-                if (curr != head) {
-                    //it must have prev
-                    curr.prev.next = curr.next;
-                    if (curr.next != null)
-                        curr.next.prev = curr.prev;
+            char c = BinaryStdIn.readChar();
 
-                    curr.next = head;
-                    curr.prev = null;
+            int index = list.indexOf(c);
+            BinaryStdOut.write(index, 8);
 
-                    head.prev = curr;
-                    head = curr;
-                }
-
-            } else {
-                if (head == null) {
-                    head = new Node();
-                    head.prev = null;
-                    head.next = null;
-                    head.ch = ch;
-                } else {
-                    curr = new Node();
-                    curr.next = head;
-                    curr.prev = null;
-                    curr.ch = ch;
-
-                    head.prev = curr;
-                    head = curr;
-
-                    map.put(ch, curr);
-                }
-            }
+            list.remove(index);
+            list.add(0, c);
         }
 
-        curr=head;
-        while (curr!=null){
-            BinaryStdOut.write(curr.ch);
-            curr=curr.next;
-        }
-
+        //close the stream
+        BinaryStdOut.close();
     }
 
     // apply move-to-front decoding, reading from standard input and writing to standard output
     public static void decode() {
+        //init
+        ArrayList<Character> list = new ArrayList<>();
+        for (char c = 0; c < 256; c++) {
+            list.add(c);
+        }
 
+        //handle
+        while (!BinaryStdIn.isEmpty()) {
+            int index = BinaryStdIn.readInt(8);
+            char ch = list.get(index);
+            BinaryStdOut.write(ch);
+
+            list.remove(index);
+            list.add(0, ch);
+        }
+
+        //close the stream
+        BinaryStdOut.close();
     }
 
     // if args[0] is "-", apply move-to-front encoding

@@ -2,25 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f7a7e9d-821a-4678-8555-ad7271ad5fb3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/BoggleBoard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BoggleSolver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/board-q.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/board4x4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dictionary-algs4.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/abra.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/single/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/BaseballElimination.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/BaseballElimination.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/Codec$TreeNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/Codec.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/Solution.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/src/BaseballElimination.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/src/BaseballElimination.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/src/Codec.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/src/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/src/Solution.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/src/teams4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/src/teams4b.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/teams4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/single/teams4b.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Codec.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Solution.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/BoggleSolver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/BoggleSolver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/board-q.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/board4x4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/dictionary-algs4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/src/BoggleSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/src/BoggleSolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/src/board-q.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/src/board4x4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/src/dictionary-algs4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MoveToFront.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MoveToFront.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -99,7 +91,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.BoggleSolver">
+  <component name="RunManager" selected="Application.MoveToFront">
     <configuration name="BaseballElimination" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BaseballElimination" />
       <module name="single" />
@@ -121,9 +113,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Outcast" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Outcast" />
+    <configuration name="MoveToFront" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MoveToFront" />
       <module name="single" />
+      <option name="PROGRAM_PARAMETERS" value="- &lt; abra.txt" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -135,13 +128,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.BaseballElimination" />
+      <item itemvalue="Application.BoggleSolver" />
+      <item itemvalue="Application.MinStack" />
+      <item itemvalue="Application.MoveToFront" />
+      <item itemvalue="Application.Solution" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MoveToFront" />
         <item itemvalue="Application.BoggleSolver" />
         <item itemvalue="Application.BaseballElimination" />
         <item itemvalue="Application.Solution" />
         <item itemvalue="Application.MinStack" />
-        <item itemvalue="Application.Outcast" />
       </list>
     </recent_temporary>
   </component>
@@ -192,7 +192,10 @@
       <workItem from="1582730629885" duration="721000" />
       <workItem from="1582770307251" duration="17256000" />
       <workItem from="1582988314330" duration="174000" />
-      <workItem from="1583025844447" duration="19534000" />
+      <workItem from="1583025844447" duration="22374000" />
+      <workItem from="1583156470840" duration="1398000" />
+      <workItem from="1583195482663" duration="1401000" />
+      <workItem from="1583202851377" duration="4352000" />
     </task>
     <servers />
   </component>

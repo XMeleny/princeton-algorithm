@@ -1,5 +1,4 @@
-import edu.princeton.cs.algs4.In;
-import edu.princeton.cs.algs4.StdOut;
+
 import edu.princeton.cs.algs4.TST;
 
 import java.util.HashSet;
@@ -28,7 +27,7 @@ public class BoggleSolver {
         HashSet<String> result = new HashSet<>();
         for (int i = 0; i < board.rows(); i++)
             for (int j = 0; j < board.cols(); j++)
-                check(board, new boolean[board.rows()][board.cols()], i, j, new StringBuilder(board.rows() * board.cols()), result);
+                check(board, new boolean[board.rows()][board.cols()], i, j, new StringBuilder(board.rows() * board.cols() * 2), result);
         return result;
     }
 
@@ -45,7 +44,6 @@ public class BoggleSolver {
             chars.append(ch);
 
         String str = new String(chars);
-//        System.out.println("checking: "+str);
         if (str.length() >= 3 && tst.contains(str)) {
             result.add(str);
         }
@@ -64,25 +62,33 @@ public class BoggleSolver {
 
 
         //if up
-        if (nowRow > 0) check(board, marked, nowRow - 1, nowCol, chars, result);
+        if (nowRow > 0)
+            check(board, marked, nowRow - 1, nowCol, chars, result);
         //if down
-        if (nowRow < board.rows() - 1) check(board, marked, nowRow + 1, nowCol, chars, result);
+        if (nowRow < board.rows() - 1)
+            check(board, marked, nowRow + 1, nowCol, chars, result);
 
         //if left
-        if (nowCol > 0) check(board, marked, nowRow, nowCol - 1, chars, result);
+        if (nowCol > 0)
+            check(board, marked, nowRow, nowCol - 1, chars, result);
         //if right
-        if (nowCol < board.cols() - 1) check(board, marked, nowRow, nowCol + 1, chars, result);
+        if (nowCol < board.cols() - 1)
+            check(board, marked, nowRow, nowCol + 1, chars, result);
 
         //if up left
-        if (nowRow > 0 && nowCol > 0) check(board, marked, nowRow - 1, nowCol - 1, chars, result);
+        if (nowRow > 0 && nowCol > 0)
+            check(board, marked, nowRow - 1, nowCol - 1, chars, result);
         //if up right
-        if (nowRow > 0 && nowCol < board.cols() - 1) check(board, marked, nowRow - 1, nowCol + 1, chars, result);
+        if (nowRow > 0 && nowCol < board.cols() - 1)
+            check(board, marked, nowRow - 1, nowCol + 1, chars, result);
 
         //if down left
-        if (nowRow < board.rows() - 1 && nowCol > 0) check(board, marked, nowRow + 1, nowCol - 1, chars, result);
+        if (nowRow < board.rows() - 1 && nowCol > 0)
+            check(board, marked, nowRow + 1, nowCol - 1, chars, result);
 
         //if down right
-        if (nowRow < board.rows() - 1 && nowCol < 3) check(board, marked, nowRow + 1, nowCol + 1, chars, result);
+        if (nowRow < board.rows() - 1 && nowCol < board.cols() - 1)
+            check(board, marked, nowRow + 1, nowCol + 1, chars, result);
 
 
         marked[nowRow][nowCol] = false;
@@ -90,8 +96,6 @@ public class BoggleSolver {
             chars.delete(chars.length() - 2, chars.length());
         else
             chars.deleteCharAt(chars.length() - 1);
-
-
     }
 
 
@@ -110,20 +114,20 @@ public class BoggleSolver {
         else return 11;
     }
 
-    public static void main(String[] args) {
-        In in = new In("dictionary-algs4.txt");
-        String[] dictionary = in.readAllStrings();
-        BoggleSolver solver = new BoggleSolver(dictionary);
-        BoggleBoard board = new BoggleBoard("board4x4.txt");
-        Iterable<String> iterable=solver.getAllValidWords(board);
-        int count=0;
-        int score = 0;
-        for (String word : iterable) {
-            StdOut.println(word);
-            score += solver.scoreOf(word);
-            count++;
-        }
-        StdOut.println("Score = " + score);
-        StdOut.println("count = " + count);
-    }
+//    public static void main(String[] args) {
+//        In in = new In("dictionary-algs4.txt");
+//        String[] dictionary = in.readAllStrings();
+//        BoggleSolver solver = new BoggleSolver(dictionary);
+//        BoggleBoard board = new BoggleBoard("board4x4.txt");
+//        Iterable<String> iterable = solver.getAllValidWords(board);
+//        int count = 0;
+//        int score = 0;
+//        for (String word : iterable) {
+//            StdOut.println(word);
+//            score += solver.scoreOf(word);
+//            count++;
+//        }
+//        StdOut.println("Score = " + score);
+//        StdOut.println("count = " + count);
+//    }
 }
