@@ -15,6 +15,7 @@ public class BurrowsWheeler {
     // if args[0] is "-", apply Burrows-Wheeler transform
     // if args[0] is "+", apply Burrows-Wheeler inverse transform
     public static void main(String[] args) {
+        
 
     }
 
