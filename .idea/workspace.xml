@@ -4,6 +4,15 @@
     <list default="true" id="0f7a7e9d-821a-4678-8555-ad7271ad5fb3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/BurrowsWheeler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/BurrowsWheeler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/Solution.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/abra.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/src/BurrowsWheeler.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/src/BurrowsWheeler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/src/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/single/src/Solution.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/single/src/abra.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Solution.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -82,14 +91,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.BurrowsWheeler">
-    <configuration name="BaseballElimination" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="BaseballElimination" />
-      <module name="single" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Solution">
     <configuration name="BoggleSolver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BoggleSolver" />
       <module name="single" />
@@ -120,20 +122,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Solution" />
+      <module name="single" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.BaseballElimination" />
       <item itemvalue="Application.BoggleSolver" />
       <item itemvalue="Application.MoveToFront" />
       <item itemvalue="Application.CircularSuffixArray" />
       <item itemvalue="Application.BurrowsWheeler" />
+      <item itemvalue="Application.Solution" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Solution" />
         <item itemvalue="Application.BurrowsWheeler" />
         <item itemvalue="Application.MoveToFront" />
         <item itemvalue="Application.CircularSuffixArray" />
         <item itemvalue="Application.BoggleSolver" />
-        <item itemvalue="Application.BaseballElimination" />
       </list>
     </recent_temporary>
   </component>
@@ -187,7 +196,11 @@
       <workItem from="1583025844447" duration="22374000" />
       <workItem from="1583156470840" duration="1398000" />
       <workItem from="1583195482663" duration="1401000" />
-      <workItem from="1583202851377" duration="19262000" />
+      <workItem from="1583202851377" duration="20276000" />
+      <workItem from="1583238919224" duration="2081000" />
+      <workItem from="1583283819999" duration="3686000" />
+      <workItem from="1583307859320" duration="18998000" />
+      <workItem from="1583377580754" duration="1655000" />
     </task>
     <servers />
   </component>
